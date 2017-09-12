@@ -4,14 +4,16 @@ public class Quicksort  {
     private int[] numbers;
     private int number;
 
-    public void sort(int[] values) {
+    public int[] sort(int[] values) {
         // check for empty or null array
         if (values ==null || values.length==0){
-            return;
+            return values;
         }
         this.numbers = values;
         number = values.length;
         quicksort(0, number - 1);
+        
+        return numbers;
     }
 
     private void quicksort(int low, int high) {
