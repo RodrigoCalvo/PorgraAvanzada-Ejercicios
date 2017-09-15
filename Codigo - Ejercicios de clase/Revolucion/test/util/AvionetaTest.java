@@ -7,7 +7,8 @@ import ejercito.*;
 
 public class AvionetaTest {
 
-	
+
+	@Test
 	public void testPuedeEquipar() {
 		Armamento armamento = new Armamento(500, 3000, 1700);
 		Avioneta avioneta = new Avioneta();
