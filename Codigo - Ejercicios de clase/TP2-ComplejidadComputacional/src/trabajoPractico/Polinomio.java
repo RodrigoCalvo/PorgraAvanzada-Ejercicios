@@ -6,12 +6,29 @@ public class Polinomio {
 	//La posicion del arreglo de coeficients con tiene el coeficiente de grado n y la
 	//posicion n contiene al termino independiente.
 	
-	public Polinomio () { 
+	public Polinomio (double[] coeficientes) throws Exception{
+		if(coeficientes.length <= 0)
+			throw new Exception("Especifique al menos un coeficiente");
+					
+		this.coeficientes = coeficientes;
+		grado = coeficientes.length -1;
 		
 	}
-	double evaluarMSucesivas (double x) { 
-		return 0;
+	public double evaluarMSucesivas (double x) { 
+		//Arranco con el termino indepentiende.
+		double resultado = this.coeficientes[this.grado];			
+		
+		for(int i = 0; i < this.grado; i++) {
+			double aux = x;
+			for(int j = 1; j < this.grado - i; j++) {
+				aux*=x;
+			}
+			resultado += aux * this.coeficientes[i];
+		}	
+		
+		return resultado;
 	}
+	
 	double evaluarRecursiva (double x) {
 		return 0;
 	}
