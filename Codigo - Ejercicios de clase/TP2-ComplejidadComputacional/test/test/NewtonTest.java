@@ -1,7 +1,4 @@
 package test;
-import java.util.GregorianCalendar;
-import java.util.Calendar;
-
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -35,7 +32,7 @@ public class NewtonTest {
 		Assert.assertEquals(12, resultado, 0);
 	}
 	@Test
-	public void testQueDenTodosIgual() {
+	public void testTerminoQueOcupaElLugarKQueDenTodosIgual() {
 		BinomioDeNewton binomio = new BinomioDeNewton(1, 2, 6);
 		int k = 5;
 		
@@ -60,7 +57,7 @@ public class NewtonTest {
 	}
 
 	@Test
-	public void testTIEMPOS() throws Exception {
+	public void testTerminoQueOcupaElLugarKTIEMPOS() throws Exception {
 		BinomioDeNewton binomio = new BinomioDeNewton(8, 2, 10);
 		int k = 2;
 		long startTime, endTime, duration;
@@ -82,5 +79,84 @@ public class NewtonTest {
 		endTime = System.nanoTime();
 		duration = (endTime - startTime);
 		System.out.println("terminoQueOcupaElLugarKPow: " + duration + " nanosegundos");	
+	}
+
+
+	@Test
+	public void testObtenerPolinomioIterativo() throws Exception {
+		BinomioDeNewton binomio = new BinomioDeNewton(1, 1, 3);
+		Polinomio polimonioCorrecto = new Polinomio(new double[]{1, 3, 3, 1});
+		
+		Polinomio polinomioIterativo = binomio.obtenerPolinomioIterativo();
+
+		//System.out.println("polimonioCorrecto: " + polimonioCorrecto);
+		//System.out.println("polinomioIterativo: " + polinomioIterativo);
+		
+		Assert.assertEquals(polimonioCorrecto, polinomioIterativo);
+	}
+	@Test
+	public void testObtenerPolinomioRecursivo() throws Exception {
+		BinomioDeNewton binomio = new BinomioDeNewton(1, 1, 3);
+		Polinomio polimonioCorrecto = new Polinomio(new double[]{1, 3, 3, 1});
+		
+		Polinomio polinomioRecursivo = binomio.obtenerPolinomioRecursivo();
+
+		//System.out.println("polimonioCorrecto: " + polimonioCorrecto);
+		//System.out.println("polinomioRecursivo: " + polinomioRecursivo);
+		
+		Assert.assertEquals(polimonioCorrecto, polinomioRecursivo);
+	}
+	@Test
+	public void testObtenerPolinomioPow() throws Exception {
+		BinomioDeNewton binomio = new BinomioDeNewton(1, 1, 3);
+		Polinomio polimonioCorrecto = new Polinomio(new double[]{1, 3, 3, 1});
+		
+		Polinomio polinomioPow = binomio.obtenerPolinomioPow();
+
+		//System.out.println("polimonioCorrecto: " + polimonioCorrecto);
+		//System.out.println("polinomioPow: " + polinomioPow);
+		
+		Assert.assertEquals(polimonioCorrecto, polinomioPow);
+	}
+	
+	@Test
+	public void testObtenerPolinomioQueDenTodosIgual() throws Exception {
+		BinomioDeNewton binomio = new BinomioDeNewton(1, 1, 3);
+		Polinomio polimonioCorrecto = new Polinomio(new double[]{1, 3, 3, 1});
+		
+		Polinomio polinomioIterativo = binomio.obtenerPolinomioIterativo();
+		Polinomio polinomioRecursivo = binomio.obtenerPolinomioRecursivo();
+		Polinomio polinomioPow = binomio.obtenerPolinomioPow();
+
+		//System.out.println("polimonioCorrecto: " + polimonioCorrecto);
+		//System.out.println("polinomioIterativo: " + polinomioIterativo);
+		
+		Assert.assertEquals(polimonioCorrecto, polinomioIterativo);
+		Assert.assertEquals(polimonioCorrecto, polinomioRecursivo);
+		Assert.assertEquals(polimonioCorrecto, polinomioPow);		
+	}
+
+	@Test
+	public void testObtenerPolinomioTIEMPOS() throws Exception {
+		BinomioDeNewton binomio = new BinomioDeNewton(8, 2, 15);
+		long startTime, endTime, duration;
+
+		startTime = System.nanoTime();
+		Polinomio polinomioIterativo = binomio.obtenerPolinomioIterativo();
+		endTime = System.nanoTime();
+		duration = (endTime - startTime);
+		System.out.println("obtenerPolinomioIterativo: " + duration + " nanosegundos");
+
+		startTime = System.nanoTime();
+		Polinomio polinomioRecursivo = binomio.obtenerPolinomioRecursivo();
+		endTime = System.nanoTime();
+		duration = (endTime - startTime);
+		System.out.println("obtenerPolinomioRecursivo: " + duration + " nanosegundos");
+
+		startTime = System.nanoTime();
+		Polinomio polinomioPow = binomio.obtenerPolinomioPow();
+		endTime = System.nanoTime();
+		duration = (endTime - startTime);
+		System.out.println("polinomioPow: " + duration + " nanosegundos");
 	}
 }

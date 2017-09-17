@@ -1,5 +1,7 @@
 package trabajoPractico;
 
+import java.util.Arrays;
+
 public class Polinomio {
 	private int grado ;
 	private double [] coeficientes;
@@ -116,5 +118,48 @@ public class Polinomio {
         	resultado = this.coeficientes[i] + (x * resultado);
         
         return resultado;
+	}
+
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + Arrays.hashCode(coeficientes);
+		result = prime * result + grado;
+		return result;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Polinomio other = (Polinomio) obj;
+		if (!Arrays.equals(coeficientes, other.coeficientes))
+			return false;
+		if (grado != other.grado)
+			return false;
+		return true;
+	}
+	@Override
+	public String toString() {
+		String result = "";
+		for(int i = 0; i <= this.grado; i++) {
+			if((this.grado - i) > 0) {
+			if(this.coeficientes[i] > 0)
+				result += " + " + Math.abs(this.coeficientes[i]) + "x^" + (this.grado - i);
+			else if(this.coeficientes[i] < 0)
+				result += " - " + Math.abs(this.coeficientes[i]) + "x^" + (this.grado - i);
+			} else {
+				if(this.coeficientes[i] > 0)
+					result += " + " + Math.abs(this.coeficientes[i]);
+				else if(this.coeficientes[i] < 0)
+					result += " - " + Math.abs(this.coeficientes[i]);				
+			}
+		}
+		return result.substring(3, result.length());
 	}
 }

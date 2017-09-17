@@ -1,8 +1,5 @@
 package test;
 
-import java.util.GregorianCalendar;
-import java.util.Calendar;
-
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -151,7 +148,13 @@ public class TestPolinomio {
 		duration = (endTime - startTime);
 		System.out.println("evaluarHorner: " + duration + " nanosegundos");		
 	}
-	
+
+	@Test
+	public void testToString() throws Exception {
+		Polinomio pol = new Polinomio(new double[]{9,0,3,-2,1});
+		
+		System.out.println(pol);
+	}
 	/*
 	@Test
 	public void testTIEMPOS() throws Exception {

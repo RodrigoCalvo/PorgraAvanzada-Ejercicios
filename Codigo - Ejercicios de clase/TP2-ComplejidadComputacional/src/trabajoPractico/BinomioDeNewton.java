@@ -12,11 +12,21 @@ public class BinomioDeNewton {
 		this.n = n;
 	}
 	
+	//############### ITERATIVOS ##############
+	public Polinomio obtenerPolinomioIterativo() throws Exception {
+		double[] coeficientes = new double[this.n+1];
+		
+		for(int i = 0; i <= this.n; i++) {
+			coeficientes[this.n - i] = terminoQueOcupaElLugarKIterativo(i);
+		}
+		
+		return new Polinomio(coeficientes);
+	}
+	
 	public double terminoQueOcupaElLugarKIterativo(int k) {
 		return combinatoriaIterativo(this.n, k) * potenciaIterativa(this.a, k) * potenciaIterativa(this.b, this.n-k);
 	}
 	
-	//N tomados de a M
 	private double combinatoriaIterativo(int n, int m) {
 		return factorialIterativo(n) / (factorialIterativo(m)*factorialIterativo(n-m));
 	}
@@ -38,12 +48,23 @@ public class BinomioDeNewton {
     	
     	return resultado;
     }
+	//############ FIN - ITERATIVOS ###########
+
+	//############### RECURSIVOS ##############
+	public Polinomio obtenerPolinomioRecursivo() throws Exception {
+		double[] coeficientes = new double[this.n+1];
+		
+		for(int i = 0; i <= this.n; i++) {
+			coeficientes[this.n - i] = terminoQueOcupaElLugarKRecursivo(i);
+		}
+		
+		return new Polinomio(coeficientes);
+	}
 	
 	public double terminoQueOcupaElLugarKRecursivo(int k) {
 		return combinatoriaRecursivo(this.n, k) * potenciaRecursivo(this.a, k) * potenciaRecursivo(this.b, this.n-k);
 	}
 	
-	//N tomados de a M
 	private double combinatoriaRecursivo(int n, int m) {
 		return factorialRecursivo(n) / (factorialRecursivo(m)*factorialRecursivo(n-m));
 	}
@@ -61,9 +82,20 @@ public class BinomioDeNewton {
 		else
 			return n*=potenciaRecursivo(n, exponente-1);
     }
+	//############ FIN - RECURSIVOS ###########
     
-
+	//################## POW ##################
+	public Polinomio obtenerPolinomioPow() throws Exception {
+		double[] coeficientes = new double[this.n+1];
+		
+		for(int i = 0; i <= this.n; i++) {
+			coeficientes[this.n - i] = terminoQueOcupaElLugarKPow(i);
+		}
+		
+		return new Polinomio(coeficientes);
+	}
 	public double terminoQueOcupaElLugarKPow(int k) {
 		return combinatoriaIterativo(this.n, k) * Math.pow(this.a, k) * Math.pow(this.b, this.n-k);
 	}
+	//############### FIN - POW ###############
 }
