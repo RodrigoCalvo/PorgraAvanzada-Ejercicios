@@ -13,6 +13,7 @@ public class BinomioDeNewton {
 	}
 	
 	//############### ITERATIVOS ##############
+	//O(N^2)
 	public Polinomio obtenerPolinomioIterativo() throws Exception {
 		double[] coeficientes = new double[this.n+1];
 		
@@ -22,7 +23,7 @@ public class BinomioDeNewton {
 		
 		return new Polinomio(coeficientes);
 	}
-	
+	//O(N)
 	public double terminoQueOcupaElLugarKIterativo(int k) {
 		return combinatoriaIterativo(this.n, k) * potenciaIterativa(this.a, k) * potenciaIterativa(this.b, this.n-k);
 	}
@@ -38,7 +39,7 @@ public class BinomioDeNewton {
         }
         return resultado;
     }
-    
+    //O(N)
     private double potenciaIterativa(double n, int exponente) {
     	double resultado = 1;
     	
@@ -98,4 +99,37 @@ public class BinomioDeNewton {
 		return combinatoriaIterativo(this.n, k) * Math.pow(this.a, k) * Math.pow(this.b, this.n-k);
 	}
 	//############### FIN - POW ###############
+
+	//######### PROGRAMACION DINAMICA #########
+	public Polinomio obtenerPolinomioDinamica() throws Exception {
+		double[] coeficientes = new double[this.n+1];
+		
+		for(int i = 0; i <= this.n; i++) {
+			coeficientes[this.n - i] = terminoQueOcupaElLugarKDinamica(i);
+		}
+		
+		return new Polinomio(coeficientes);
+	}
+
+	public double terminoQueOcupaElLugarKDinamica(int k) {
+		return combinatoriaDinamica(this.n, k) * Math.pow(this.a, k) * Math.pow(this.b, this.n-k);
+	}
+	private double combinatoriaDinamica(int n, int m) {
+		return factorialDinamica(n) / (factorialDinamica(m)*factorialDinamica(n-m));
+	}
+    
+    private long[] factoriales = new long[101];
+    public long factorialDinamica(long n) {
+    	 
+        if (n == 0 || n == 1) {
+            return 1;
+        } else {
+            if (factoriales[(int) n] != 0)
+                return factoriales[(int) n];
+            else
+                return factoriales[(int) n] = (n * factorialDinamica(n - 1));
+        }
+     
+    }
+	//###### FIN - PROGRAMACION DINAMICA ######
 }

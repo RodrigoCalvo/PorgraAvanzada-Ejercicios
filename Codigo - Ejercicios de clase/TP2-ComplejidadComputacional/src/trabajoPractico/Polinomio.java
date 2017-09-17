@@ -106,7 +106,6 @@ public class Polinomio {
 		for(int i = 0; i< this.grado; i++)
 			resultado += this.coeficientes[this.grado-i-1] * Math.pow(x, i+1);
 		return resultado;
-
 	}
 	
 	// y a sugerencia de Lucas P
