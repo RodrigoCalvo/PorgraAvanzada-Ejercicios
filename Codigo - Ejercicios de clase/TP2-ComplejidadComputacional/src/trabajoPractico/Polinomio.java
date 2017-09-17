@@ -30,21 +30,38 @@ public class Polinomio {
 		return resultado;
 	}
 	
-	public double evaluarRecursiva (double x) {
-		
+	public double evaluarRecursiva (double x) {		
 		double resultado = this.coeficientes[this.grado];
-		for(int i = 0; i<grado ; i++)
-			resultado += this.coeficientes[i] * potencia(x, this.grado-i); 	
+		
+		for(int i = 0; i < this.grado; i++)
+			resultado += this.coeficientes[i] * potencia(x, this.grado-i);
+		
 		return resultado;
 	}
 	
-	
+	private double potencia(double x, int n){
+		if(n == 0)
+			return 1;
+		else
+			return x*=potencia(x, n-1);
+	}	
 	
 	public double evaluarRecursivaPar (double x ) { 
 		double resultado = this.coeficientes[this.grado];
-		for(int i = 0; i<grado ; i++)
-			resultado += this.coeficientes[i] * potenciaConsiderandoExponente(x, this.grado-i); 	
+		
+		for(int i = 0; i < this.grado; i++)
+			resultado += this.coeficientes[i] * potenciaConsiderandoExponente(x, this.grado-i); 
+		
 		return resultado;
+	}
+	
+	private double potenciaConsiderandoExponente(double x, int n) {
+		if(n == 0)
+			return 1;
+		else if(n%2 == 1) 
+			return x*= potenciaConsiderandoExponente(x, n-1);
+		else
+			return x = potenciaConsiderandoExponente(x*x, n/2);
 	}
 	
 	public double evaluarProgDinamica (double x ) { 
@@ -76,8 +93,7 @@ public class Polinomio {
 			resultados[i] = x * resultados[i+1];
 			
 			resultado += coeficientes[i] * resultados[i];
-		}		
-		
+		}
 		
 		return resultado;
 	}
@@ -86,7 +102,7 @@ public class Polinomio {
 	{ 
 		double resultado  = this.coeficientes[this.grado];
 		for(int i = 0; i< this.grado; i++)
-			resultado += this.coeficientes[this.grado-i-1 ] * Math.pow(x, i+1);
+			resultado += this.coeficientes[this.grado-i-1] * Math.pow(x, i+1);
 		return resultado;
 
 	}
@@ -96,25 +112,9 @@ public class Polinomio {
 		
 		double resultado = this.coeficientes[0];
 		
-        for (int i = 1; i <= grado; i++)
+        for (int i = 1; i <= this.grado; i++)
         	resultado = this.coeficientes[i] + (x * resultado);
         
         return resultado;
-	}
-	
-	public double potencia(double x, int n){
-		if(n == 0)
-			return 1;
-		else
-			return x*=potencia(x, n-1);
-	}
-	
-	public double potenciaConsiderandoExponente(double x, int n) {
-		if(n == 0)
-			return 1;
-		else if(n%2 == 1) 
-			return x*= potenciaConsiderandoExponente(x, n-1);
-		else
-			return x =potenciaConsiderandoExponente(x*x, n/2);
 	}
 }
