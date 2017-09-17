@@ -195,8 +195,10 @@ public class NewtonTest {
 		duration = (endTime - startTime);
 		System.out.println("obtenerPolinomioPow: " + duration + " nanosegundos");
 
+		/*
 		for(int i = 0; i <= 100; i++)
 			binomio.factorialDinamica(i);
+		*/
 		startTime = System.nanoTime();
 		Polinomio polinomioDinamica = binomio.obtenerPolinomioDinamica();
 		endTime = System.nanoTime();
