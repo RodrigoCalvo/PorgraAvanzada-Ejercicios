@@ -3,8 +3,8 @@ package trabajoPractico;
 public class Polinomio {
 	private int grado ;
 	private double [] coeficientes;
-	//La posicion del arreglo de coeficients con tiene el coeficiente de grado n y la
-	//posicion n contiene al termino independiente.
+	//La posicion 0 del arreglo de coeficientes contiene el coeficiente de grado n 
+	//y la posicion n contiene al termino independiente .
 	
 	public Polinomio (double[] coeficientes) throws Exception{
 		if(coeficientes.length <= 0)
@@ -35,17 +35,54 @@ public class Polinomio {
 	double evaluarRecursivaPar (double x ) { 
 		return 0;
 	}
-	double evaluarProgDinamica (double x ) { 
-		return 0;
+	
+	public double evaluarProgDinamica (double x ) { 
+		double [] resultados = new double[coeficientes.length];
+	
+		resultados[grado] = 1;
+		
+		for (int i = grado - 1; i >= 0; i--) {			
+			resultados[i] = x * resultados[i+1];
+		}	
+		
+		double resultado = 0;
+		
+		for (int j = 0; j <= this.grado; j++) {
+			resultado += coeficientes[j] * resultados[j];
+		}
+		
+		return resultado;
 	}
-	double evaluarMejorada (double x ) { 
-		return 0; 
+	
+	public double evaluarMejorada (double x ) { 
+		
+		double [] resultados = new double[coeficientes.length];
+		
+		resultados[grado] = 1;
+		double resultado = this.coeficientes[this.grado];		
+		
+		for (int i = grado - 1; i >= 0; i--) {			
+			resultados[i] = x * resultados[i+1];
+			
+			resultado += coeficientes[i] * resultados[i];
+		}		
+		
+		
+		return resultado;
 	}
+	
+	
 	double evaluarPow (double x ) { 
 		return 0;
 	}
 	// y a sugerencia de Lucas P
-	double evaluarHorner ( double x ) { 
-		return 0;
+	public double evaluarHorner ( double x ) { 
+		
+		double resultado = this.coeficientes[0];
+		
+        for (int i = 1; i <= grado; i++)
+        	resultado = this.coeficientes[i] + (x * resultado);
+        
+        return resultado;
 	}
 }
