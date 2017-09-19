@@ -22,7 +22,8 @@ public class TestPolinomio {
 
 		double resultado = pol.evaluarRecursiva(4);
 		
-		Assert.assertEquals(57, resultado, 0);
+		Assert.assertEquals(57, resultado, 0); 
+		
 	}
 	
 	@Test
@@ -151,7 +152,7 @@ public class TestPolinomio {
 
 	@Test
 	public void testToString() throws Exception {
-		Polinomio pol = new Polinomio(new double[]{9,0,3,-2,1});
+		Polinomio pol = new Polinomio(new double[]{123,31,23,9,5,666,89,6,5,54,89,6,5,54,89,6,5,54,89,6,5,123,31,23,9,5,666,89,6,5,54,89,6,5,54,89,6,5,54,89,6,5,54});
 		
 		System.out.println(pol);
 	}

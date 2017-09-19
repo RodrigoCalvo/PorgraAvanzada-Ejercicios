@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="Codigo - Ejercicios de clase/A correr que es muy saludable/src"/>
+	<classpathentry kind="src" path="Codigo - Ejercicios de clase/Casas/src"/>
+	<classpathentry kind="src" path="Codigo - Ejercicios de clase/Complejo/src"/>
+	<classpathentry kind="src" path="Codigo - Ejercicios de clase/Descubriendo Nombres Repetidos/src"/>
+	<classpathentry kind="src" path="Codigo - Ejercicios de clase/EntradaSalida/src"/>
+	<classpathentry kind="src" path="Codigo - Ejercicios de clase/Geometria/HuevoFrito/src"/>
+	<classpathentry kind="src" path="Codigo - Ejercicios de clase/Geometria/HuevoFrito/Test"/>
+	<classpathentry kind="src" path="Codigo - Ejercicios de clase/Geometria/src"/>
+	<classpathentry kind="src" path="Codigo - Ejercicios de clase/Geometria/Testsrc"/>
+	<classpathentry kind="src" path="Codigo - Ejercicios de clase/Hola mundo/src"/>
+	<classpathentry kind="src" path="Codigo - Ejercicios de clase/HolaMundo/src"/>
+	<classpathentry kind="src" path="Codigo - Ejercicios de clase/K-MasPequeños/src"/>
+	<classpathentry kind="src" path="Codigo - Ejercicios de clase/Luchadores Japoneses/src"/>
+	<classpathentry kind="src" path="Codigo - Ejercicios de clase/Ordenados/src"/>
+	<classpathentry kind="src" path="Codigo - Ejercicios de clase/Qsort y mergeSort/src"/>
+	<classpathentry kind="src" path="Codigo - Ejercicios de clase/Revolucion/src"/>
+	<classpathentry kind="src" path="Codigo - Ejercicios de clase/Revolucion/test"/>
+	<classpathentry kind="src" path="Codigo - Ejercicios de clase/SECMAX/src"/>
+	<classpathentry kind="src" path="Codigo - Ejercicios de clase/TP2-ComplejidadComputacional/src"/>
+	<classpathentry kind="src" path="Codigo - Ejercicios de clase/TP2-ComplejidadComputacional/test"/>
+	<classpathentry kind="output" path="Codigo - Ejercicios de clase/Complejo/bin"/>
+</classpath>
