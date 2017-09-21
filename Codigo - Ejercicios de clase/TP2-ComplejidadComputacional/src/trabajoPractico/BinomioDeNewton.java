@@ -4,12 +4,15 @@ public class BinomioDeNewton {
 	private double a;
 	private double b;
 	private int n;
+    private int[][] arbol_de_tartaglia;
 	
 	public BinomioDeNewton(double a, double b, int n) {
 		super();
 		this.a = a;
 		this.b = b;
 		this.n = n;
+		arbol_de_tartaglia = new int[this.n+1][];
+		generarArbol();
 	}
 	
 	//############### ITERATIVOS ##############
@@ -95,6 +98,7 @@ public class BinomioDeNewton {
 		
 		return new Polinomio(coeficientes);
 	}
+	
 	public double terminoQueOcupaElLugarKPow(int k) {
 		return combinatoriaIterativo(this.n, k) * Math.pow(this.a, k) * Math.pow(this.b, this.n-k);
 	}
@@ -115,21 +119,19 @@ public class BinomioDeNewton {
 		return combinatoriaDinamica(this.n, k) * Math.pow(this.a, k) * Math.pow(this.b, this.n-k);
 	}
 	private double combinatoriaDinamica(int n, int m) {
-		return factorialDinamica(n) / (factorialDinamica(m)*factorialDinamica(n-m));
+		return arbol_de_tartaglia[n][m];
 	}
-    
-    private long[] factoriales = new long[101];
-    public long factorialDinamica(long n) {
-    	 
-        if (n == 0 || n == 1) {
-            return 1;
-        } else {
-            if (factoriales[(int) n] != 0)
-                return factoriales[(int) n];
-            else
-                return factoriales[(int) n] = (n * factorialDinamica(n - 1));
-        }
-     
+    private void generarArbol()
+    {
+        for (int i = 0; i < arbol_de_tartaglia.length; i++)
+        {
+        	arbol_de_tartaglia[i] = new int[i+2];
+        	arbol_de_tartaglia[i][0] = 1;
+        	arbol_de_tartaglia[i][i] = 1;
+            for (int j = 1; j < i; j++) {
+            	arbol_de_tartaglia[i][j] = arbol_de_tartaglia[i-1][j] + arbol_de_tartaglia[i-1][j-1];
+            }
+        }        
     }
 	//###### FIN - PROGRAMACION DINAMICA ######
 }

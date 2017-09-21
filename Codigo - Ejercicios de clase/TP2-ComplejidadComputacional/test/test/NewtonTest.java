@@ -93,8 +93,6 @@ public class NewtonTest {
 		duration = (endTime - startTime);
 		System.out.println("terminoQueOcupaElLugarKPow: " + duration + " nanosegundos");
 
-		for(int i = 0; i <= 100; i++)
-			binomio.factorialDinamica(i);
 		startTime = System.nanoTime();
 		double resultadoDinamica = binomio.terminoQueOcupaElLugarKDinamica(k);
 		endTime = System.nanoTime();
@@ -195,14 +193,10 @@ public class NewtonTest {
 		duration = (endTime - startTime);
 		System.out.println("obtenerPolinomioPow: " + duration + " nanosegundos");
 
-		/*
-		for(int i = 0; i <= 100; i++)
-			binomio.factorialDinamica(i);
-		*/
 		startTime = System.nanoTime();
 		Polinomio polinomioDinamica = binomio.obtenerPolinomioDinamica();
 		endTime = System.nanoTime();
 		duration = (endTime - startTime);
-		System.out.println("obtenerPolinomioDinamica: " + duration + " nanosegundos");
+		System.out.println("obtenerPolinomioDinamica: " + duration + " nanosegundos");		
 	}
 }
