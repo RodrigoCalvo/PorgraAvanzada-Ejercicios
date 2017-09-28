@@ -1,6 +1,6 @@
 package unidades;
 
-public class Arquero {
+public class Arquero extends Unidad {
 	
 	private final static int RANGO_MINIMO = 2;
 	private final static int RANGO_MAXIMO = 5;
@@ -17,7 +17,7 @@ public class Arquero {
 	protected boolean puedoAtacar() {
 		if(this.salud == 0)
 			return false;
-		if(this.cant_flechas <=6)
+		if(this.cant_flechas == 0)
 			return false;
 		
 		return true;
