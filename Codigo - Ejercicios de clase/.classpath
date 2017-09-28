@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="A correr que es muy saludable/src"/>
+	<classpathentry kind="src" path="Casas/src"/>
+	<classpathentry kind="src" path="Complejo/src"/>
+	<classpathentry kind="src" path="Descubriendo Nombres Repetidos/src"/>
+	<classpathentry kind="src" path="EntradaSalida/src"/>
+	<classpathentry kind="src" path="Geometria/HuevoFrito/src"/>
+	<classpathentry kind="src" path="Geometria/HuevoFrito/Test"/>
+	<classpathentry kind="src" path="Geometria/src"/>
+	<classpathentry kind="src" path="Geometria/Testsrc"/>
+	<classpathentry kind="src" path="Hola mundo/src"/>
+	<classpathentry kind="src" path="HolaMundo/src"/>
+	<classpathentry kind="src" path="JuegoConLetras/src"/>
+	<classpathentry kind="src" path="K-MasPequeños/src"/>
+	<classpathentry kind="src" path="Luchadores Japoneses/src"/>
+	<classpathentry kind="src" path="Ordenados/src"/>
+	<classpathentry kind="src" path="Piratas/src"/>
+	<classpathentry kind="src" path="Qsort y mergeSort/src"/>
+	<classpathentry kind="src" path="Revolucion/src"/>
+	<classpathentry kind="src" path="Revolucion/test"/>
+	<classpathentry kind="src" path="SECMAX/src"/>
+	<classpathentry kind="src" path="TP2-ComplejidadComputacional/src"/>
+	<classpathentry kind="src" path="TP2-ComplejidadComputacional/test"/>
+	<classpathentry kind="output" path="Complejo/bin"/>
+</classpath>
