@@ -2,10 +2,12 @@ package unidades;
 
 
 
-public abstract class Unidad {
+public interface Unidad {
 	
 	
-	protected abstract boolean puedoAtacar();	
+	public double getDaño();
+	public double getEnergia();
+	public double getDefensa();
 	
 
 }

@@ -2,18 +2,30 @@ package unidades;
 
 
 
-public class Soldado extends Unidad {
+public class Soldado implements Unidad {
+
+
 	private final int rango = 0;
-	private int energia;
-	private int salud;
-	private int daño = 10;
+	private double defensa = 0;
+	private double energia = 100;
+	private double salud = 200;
+	private double daño = 10;
 	
 	
-	public Soldado() {
-		super();
-		this.energia = 100;
-		this.salud = 200;
-	}
+	
+	 @Override
+	 public double getDaño() {
+	  return 10;
+	 }
+	 @Override
+	 public double getEnergia() {
+	  return 100;
+	 }
+	 
+	 @Override
+	 public double getDefensa() {
+		 return 0;
+	 }
 	
 	protected boolean puedoAtacar() {
 		if(this.salud == 0)
