@@ -12,5 +12,7 @@ public abstract class Unidad implements Elemento {
 	private double defensa;
 	private double salud;
 	private double daño;
+	
+	public abstract boolean puedoAtacar();
 
 }

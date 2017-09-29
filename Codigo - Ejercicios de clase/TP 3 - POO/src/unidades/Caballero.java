@@ -24,7 +24,7 @@ public class Caballero extends Unidad{
 	 public double getDefensa() {
 		 return 0;
 	 }
-	protected boolean puedoAtacar() {
+	public boolean puedoAtacar() {
 		if(this.salud == 0)
 			return false;
 		if(this.cant_ataques == 3)

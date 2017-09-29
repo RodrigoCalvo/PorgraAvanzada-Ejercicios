@@ -2,22 +2,22 @@ package unidades;
 
 public class Escudo extends UnidadDecorator{
 	
-	 public Escudo (Unidad guerrero){
-		  this.unidad = guerrero;
+	 public Escudo (Elemento guerrero){
+		  this.elemento = guerrero;
 		 }
 		 
 	 @Override
 	 public double getDaño() {
-	  return this.unidad.getDaño();
+	  return this.elemento.getDaño();
 	 }
 	 @Override
 	 public double getEnergia() {
-	  return this.unidad.getEnergia();
+	  return this.elemento.getEnergia();
 	 }
 	 
 	 @Override
 	 public double getDefensa() {
-		 return this.unidad.getDefensa() + 0.4;
+		 return this.elemento.getDefensa() + 0.4;
 	 }
 
 }

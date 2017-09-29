@@ -11,7 +11,7 @@ public class testeo {
 	@Test
 	public void test() {
 		
-		Unidad arquero = new Arquero();
+		Elemento arquero = new Arquero();
 		arquero = new Capa(arquero);
 		System.out.println(arquero.getDaño());
 	}

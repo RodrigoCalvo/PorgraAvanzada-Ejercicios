@@ -2,22 +2,21 @@ package unidades;
 
 public class Puñal extends UnidadDecorator{
 	
-	 public Puñal (Unidad guerrero){
-		  this.unidad = guerrero;
+	public Puñal (Elemento guerrero){
+		  this.elemento = guerrero;
 		 }
-	 
 	 @Override
 	 public double getDaño() {
-	  return this.unidad.getDaño()  +3;
+	  return this.elemento.getDaño()  +3;
 	 }
 	 @Override
 	 public double getEnergia() {
-	  return this.unidad.getEnergia() ;
+	  return this.elemento.getEnergia() ;
 	 }
 	 
 	 @Override
 	 public double getDefensa() {
-		 return this.unidad.getDefensa() -3;
+		 return this.elemento.getDefensa() -3;
 	 }
 
 }

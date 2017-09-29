@@ -26,7 +26,7 @@ public class Arquero extends Unidad {
 		 return 0;
 	 }
 	
-	protected boolean puedoAtacar() {
+	public boolean puedoAtacar() {
 		if(this.salud == 0)
 			return false;
 		if(this.cant_flechas == 0)

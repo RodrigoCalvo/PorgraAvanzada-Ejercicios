@@ -5,7 +5,8 @@ package unidades;
 public class Soldado extends Unidad {
 
 
-	private final int rango = 0;
+	private static final int RANGO_MINIMO = 0;
+	private  static final int RANGO_MAXIMO = 0;
 	private double defensa = 0;
 	private double energia = 100;
 	private double salud = 200;
@@ -27,7 +28,7 @@ public class Soldado extends Unidad {
 		 return 0;
 	 }
 	
-	protected boolean puedoAtacar() {
+	public boolean puedoAtacar() {
 		if(this.salud == 0)
 			return false;
 		if(this.energia == 0)

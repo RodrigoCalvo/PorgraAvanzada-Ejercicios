@@ -3,21 +3,21 @@ package unidades;
 public class Capa extends UnidadDecorator {
 	
 	
-	 public Capa (Unidad guerrero){
-		  this.unidad = guerrero;
+	 public Capa (Elemento guerrero){
+		  this.elemento = guerrero;
 		 }
 	 @Override
 	 public double getDaño() {
-	  return this.unidad.getDaño() * 0.9;
+	  return this.elemento.getDaño() * 0.9;
 	 }
 	 @Override
 	 public double getEnergia() {
-	  return this.unidad.getEnergia() *2;
+	  return this.elemento.getEnergia() *2;
 	 }
 	 
 	 @Override
 	 public double getDefensa() {
-		 return this.unidad.getDefensa();
+		 return this.elemento.getDefensa();
 	 }
 
 }
