@@ -1,6 +1,6 @@
 package unidades;
 
-public class Escudo extends Items{
+public class Escudo extends UnidadDecorator{
 	
 	 public Escudo (Unidad guerrero){
 		  this.unidad = guerrero;

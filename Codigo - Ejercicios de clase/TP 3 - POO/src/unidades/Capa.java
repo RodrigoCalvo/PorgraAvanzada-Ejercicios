@@ -1,6 +1,6 @@
 package unidades;
 
-public class Capa extends Items {
+public class Capa extends UnidadDecorator {
 	
 	
 	 public Capa (Unidad guerrero){

@@ -2,7 +2,7 @@ package unidades;
 
 
 
-public class Soldado implements Unidad {
+public class Soldado extends Unidad {
 
 
 	private final int rango = 0;

@@ -1,6 +1,6 @@
 package unidades;
 
-public class Arquero implements Unidad {
+public class Arquero extends Unidad {
 	
 	
 

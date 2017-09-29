@@ -1,6 +1,6 @@
 package unidades;
 
-public class Caballero implements Unidad{
+public class Caballero extends Unidad{
 	
 	private final static int RANGO_MINIMO = 1;
 	private final static int RANGO_MAXIMO = 2;
