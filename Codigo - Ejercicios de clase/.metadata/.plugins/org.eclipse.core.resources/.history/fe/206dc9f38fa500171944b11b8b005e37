@@ -1,0 +1,13 @@
+package items;
+
+import unidades.Elemento;
+
+public abstract class UnidadDecorator implements Elemento {
+	
+	protected Elemento elemento;
+
+	@Override
+	public String toString() {
+		return "UnidadDecorator [elemento=" + elemento + "]";
+	}
+}

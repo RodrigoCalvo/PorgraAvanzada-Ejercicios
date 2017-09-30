@@ -1,0 +1,14 @@
+package unidades;
+
+import mapa.Ubicacion;
+
+public interface Elemento {	
+	public double getDaño();
+	public double getEnergia();
+	public double getDefensa();
+	public double getSalud();
+	public Ubicacion getUbicacion();
+	
+	public void atacar(Elemento e);
+	public void meAtacan(double dañoRecibido);
+}

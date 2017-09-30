@@ -1,0 +1,24 @@
+package unidades;
+
+import mapa.Ubicacion;
+
+public abstract class Unidad implements Elemento {
+	/*
+	protected static int RANGO_MINIMO;
+	protected  static int RANGO_MAXIMO;
+	
+	protected int cant_flechas;
+	protected double energia;
+	protected double defensa;
+	protected double salud;
+	protected double daño;
+	*/
+	protected Ubicacion ubicacion;
+	
+	public void atacar(Unidad u) {
+		if(this.puedoAtacar(u))
+			this.ataco(u);
+	}
+	public abstract void ataco(Unidad u);
+	public abstract boolean puedoAtacar(Unidad u);
+}

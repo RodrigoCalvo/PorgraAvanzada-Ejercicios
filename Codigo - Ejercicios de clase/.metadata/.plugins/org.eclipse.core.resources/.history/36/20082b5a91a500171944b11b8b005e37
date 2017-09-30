@@ -1,0 +1,56 @@
+package unidades;
+
+import mapa.Ubicacion;
+
+public class Lancero extends Unidad{
+	private final static int RANGO_MINIMO = 1;
+	private final static int RANGO_MAXIMO = 3;
+	private double salud;
+	private double defensa;
+	private double daño;
+
+	public Lancero(Ubicacion u) {
+		super();
+		salud = 150;
+		daño = 25;
+		ubicacion = u;
+	}
+	
+	public boolean puedoAtacar() {
+		if(this.salud == 0)
+			return false;		
+		return true;
+	}
+
+	@Override
+	public double getDaño() {
+		// TODO Auto-generated method stub
+		return daño;
+	}
+
+	@Override
+	public double getEnergia() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public double getDefensa() {
+		// TODO Auto-generated method stub
+		return defensa;
+	}
+
+	@Override
+	public void ataco(Unidad u) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean puedoAtacar(Unidad u) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	
+	
+}

@@ -1,0 +1,20 @@
+package items;
+
+import unidades.Unidad;
+
+public class Capa extends UnidadDecorator  {
+
+	public Capa(Unidad unidad) {
+		super(unidad);
+	}
+	
+	@Override
+	public double getDaño() {
+		return this.daño;
+	}
+
+	@Override
+	public double getEnergia() {
+		return this.unidad.getEnergia()*2; 
+	}
+}

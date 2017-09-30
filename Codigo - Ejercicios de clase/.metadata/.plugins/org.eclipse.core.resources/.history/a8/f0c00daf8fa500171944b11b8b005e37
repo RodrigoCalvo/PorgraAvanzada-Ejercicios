@@ -1,0 +1,21 @@
+package test;
+import unidades.*;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+import items.Capa;
+import mapa.Ubicacion;
+
+
+
+public class testeo {
+
+	@Test
+	public void test() {
+		Ubicacion ubi = new Ubicacion(0, 0)
+		Elemento arquero = new Arquero(ubi);
+		arquero = new Capa(arquero);
+		System.out.println(arquero.getDaño());
+	}
+}

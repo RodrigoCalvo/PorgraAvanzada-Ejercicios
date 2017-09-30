@@ -1,0 +1,10 @@
+package items;
+
+import unidades.Unidad;
+
+public class Capa extends UnidadDecorator  {
+
+	public Capa(Unidad unidad) {
+		super(unidad);
+	}
+}

@@ -1,0 +1,24 @@
+package unidades;
+
+import mapa.Ubicacion;
+
+public interface Unidad {
+	public double getDaño();
+	public double getEnergia();
+	public double getDefensa();
+	public double getSalud();
+	public Ubicacion getUbicacion();
+	
+	public default Boolean atacar(Unidad unidad) {
+		if(this.puedoAtacar(unidad)) {
+			this.ataca(unidad);
+			return true;
+		}
+		return false;
+	}
+	
+	public boolean puedoAtacar(Unidad unidad);
+	public void ataca(Unidad unidad);	
+	public void meAtacanCon(double daño);
+	public double calcularDañoQueMeInflinjen(double daño);
+}

@@ -1,0 +1,259 @@
+package test;
+import unidades.*;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+import items.*;
+import mapa.Ubicacion;
+
+
+
+public class testeo {
+	@Test
+	public void testSoldado() {
+		Ubicacion ubi = new Ubicacion(0, 0);
+		Unidad soldado = new Soldado(ubi);
+		
+		//System.out.println(soldado);
+	}
+	@Test
+	public void testArquero() {
+		Ubicacion ubi = new Ubicacion(0, 0);
+		Unidad arquero = new Arquero(ubi);
+		
+		//System.out.println(arquero);
+	}
+	@Test
+	public void testLancero() {
+		Ubicacion ubi = new Ubicacion(0, 0);
+		Unidad lancero = new Lancero(ubi);
+		
+		//System.out.println(lancero);
+	}
+	@Test
+	public void testCaballero() {
+		Ubicacion ubi = new Ubicacion(0, 0);
+		Unidad caballero = new Caballero(ubi);
+		
+		//System.out.println(caballero);
+	}
+
+	@Test
+	public void testSoldadoConItems() {
+		Ubicacion ubi = new Ubicacion(0, 0);
+		Unidad soldado = new Soldado(ubi);
+		
+		soldado = new Capa(soldado);
+		
+		Assert.assertEquals(200, soldado.getEnergia(), 0);
+		Assert.assertEquals(9, soldado.getDaño(), 0);
+
+		soldado = new Puñal(soldado);
+
+		Assert.assertEquals(12, soldado.getDaño(), 0);
+		Assert.assertEquals(-3, soldado.getDefensa(), 0);
+	}
+	@Test
+	public void testArqueroConItems() {
+		Ubicacion ubi = new Ubicacion(0, 0);
+		Unidad arquero = new Arquero(ubi);
+		
+		arquero = new Capa(arquero);
+		
+		Assert.assertEquals(0, arquero.getEnergia(), 0);
+		Assert.assertEquals(4.5, arquero.getDaño(), 0);
+
+		arquero = new Puñal(arquero);
+
+		Assert.assertEquals(7.5, arquero.getDaño(), 0);
+		Assert.assertEquals(-3, arquero.getDefensa(), 0);
+	}
+	@Test
+	public void testLanceroConItems() {
+		Ubicacion ubi = new Ubicacion(0, 0);
+		Unidad lancero = new Lancero(ubi);
+		
+		lancero = new Capa(lancero);
+		
+		Assert.assertEquals(0, lancero.getEnergia(), 0);
+		Assert.assertEquals(22.5, lancero.getDaño(), 0);
+
+		lancero = new Puñal(lancero);
+
+		Assert.assertEquals(25.5, lancero.getDaño(), 0);
+		Assert.assertEquals(-3, lancero.getDefensa(), 0);
+	}
+	@Test
+	public void testCaballeroConItems() {
+		Ubicacion ubi = new Ubicacion(0, 0);
+		Unidad caballero = new Caballero(ubi);
+		
+		caballero = new Capa(caballero);
+		
+		Assert.assertEquals(0, caballero.getEnergia(), 0);
+		Assert.assertEquals(45, caballero.getDaño(), 0);
+
+		caballero = new Puñal(caballero);
+
+		Assert.assertEquals(48, caballero.getDaño(), 0);
+		Assert.assertEquals(-3, caballero.getDefensa(), 0);
+	}
+
+	@Test
+	public void testAtaquesPorDistancia() {
+		Unidad soldado = new Soldado(new Ubicacion(1, 1));
+		Unidad otro = new Soldado(new Ubicacion(1, 2));
+		
+		Assert.assertTrue(soldado.atacar(otro));
+
+		otro = new Soldado(new Ubicacion(3, 3));
+		Assert.assertFalse(soldado.atacar(otro));
+
+		//######################################################
+		
+		Unidad arquero = new Arquero(new Ubicacion(1, 1));
+		otro = new Arquero(new Ubicacion(3, 2));
+		
+		Assert.assertTrue(arquero.atacar(otro));
+
+		otro = new Arquero(new Ubicacion(1, 1));
+		Assert.assertFalse(arquero.atacar(otro));
+		
+		otro = new Arquero(new Ubicacion(500, 6));
+		Assert.assertFalse(arquero.atacar(otro));
+		
+		//#####################################################
+		//Completar con los lanceros
+
+		//#####################################################
+		//Completar con los caballeros		
+	}
+	
+	@Test
+	public void testAtaquesSoldado() {
+		Unidad soldado = new Soldado(new Ubicacion(1, 1));
+		Unidad otro = new Soldado(new Ubicacion(1, 2));
+		
+		Assert.assertTrue(soldado.atacar(otro));
+		Assert.assertEquals(190, otro.getSalud(), 0);
+		Assert.assertEquals(90, soldado.getEnergia(), 0);
+		
+		Assert.assertTrue(soldado.atacar(otro));
+		Assert.assertEquals(180, otro.getSalud(), 0);
+		Assert.assertEquals(80, soldado.getEnergia(), 0);
+
+		Assert.assertTrue(soldado.atacar(otro));
+		Assert.assertEquals(170, otro.getSalud(), 0);
+		Assert.assertEquals(70, soldado.getEnergia(), 0);
+		
+		Assert.assertTrue(soldado.atacar(otro));
+		Assert.assertEquals(160, otro.getSalud(), 0);
+		Assert.assertEquals(60, soldado.getEnergia(), 0);
+		
+		Assert.assertTrue(soldado.atacar(otro));
+		Assert.assertEquals(150, otro.getSalud(), 0);
+		Assert.assertEquals(50, soldado.getEnergia(), 0);
+		
+		Assert.assertTrue(soldado.atacar(otro));
+		Assert.assertEquals(140, otro.getSalud(), 0);
+		Assert.assertEquals(40, soldado.getEnergia(), 0);
+		
+		Assert.assertTrue(soldado.atacar(otro));
+		Assert.assertEquals(130, otro.getSalud(), 0);
+		Assert.assertEquals(30, soldado.getEnergia(), 0);
+		
+		Assert.assertTrue(soldado.atacar(otro));
+		Assert.assertEquals(120, otro.getSalud(), 0);
+		Assert.assertEquals(20, soldado.getEnergia(), 0);
+		
+		Assert.assertTrue(soldado.atacar(otro));
+		Assert.assertEquals(110, otro.getSalud(), 0);
+		Assert.assertEquals(10, soldado.getEnergia(), 0);
+		
+		Assert.assertTrue(soldado.atacar(otro));
+		Assert.assertEquals(100, otro.getSalud(), 0);
+		Assert.assertEquals(0, soldado.getEnergia(), 0);
+		
+		Assert.assertFalse(soldado.atacar(otro));
+		Assert.assertEquals(100, otro.getSalud(), 0);
+		Assert.assertEquals(0, soldado.getEnergia(), 0);
+		
+		soldado.tomaPocion();
+		
+		Assert.assertTrue(soldado.atacar(otro));
+		Assert.assertEquals(90, otro.getSalud(), 0);
+		Assert.assertEquals(90, soldado.getEnergia(), 0);
+		
+		Assert.assertTrue(soldado.atacar(otro));
+		Assert.assertEquals(80, otro.getSalud(), 0);
+		Assert.assertEquals(80, soldado.getEnergia(), 0);
+
+		Assert.assertTrue(soldado.atacar(otro));
+		Assert.assertEquals(70, otro.getSalud(), 0);
+		Assert.assertEquals(70, soldado.getEnergia(), 0);
+		
+		Assert.assertTrue(soldado.atacar(otro));
+		Assert.assertEquals(60, otro.getSalud(), 0);
+		Assert.assertEquals(60, soldado.getEnergia(), 0);
+		
+		Assert.assertTrue(soldado.atacar(otro));
+		Assert.assertEquals(50, otro.getSalud(), 0);
+		Assert.assertEquals(50, soldado.getEnergia(), 0);
+		
+		Assert.assertTrue(soldado.atacar(otro));
+		Assert.assertEquals(40, otro.getSalud(), 0);
+		Assert.assertEquals(40, soldado.getEnergia(), 0);
+		
+		Assert.assertTrue(soldado.atacar(otro));
+		Assert.assertEquals(30, otro.getSalud(), 0);
+		Assert.assertEquals(30, soldado.getEnergia(), 0);
+		
+		Assert.assertTrue(soldado.atacar(otro));
+		Assert.assertEquals(20, otro.getSalud(), 0);
+		Assert.assertEquals(20, soldado.getEnergia(), 0);
+		
+		Assert.assertTrue(soldado.atacar(otro));
+		Assert.assertEquals(10, otro.getSalud(), 0);
+		Assert.assertEquals(10, soldado.getEnergia(), 0);
+		
+		Assert.assertTrue(soldado.atacar(otro));
+		Assert.assertEquals(0, otro.getSalud(), 0);
+		Assert.assertEquals(0, soldado.getEnergia(), 0);
+
+		Assert.assertFalse(soldado.atacar(otro));
+		Assert.assertEquals(0, otro.getSalud(), 0);
+		Assert.assertEquals(0, soldado.getEnergia(), 0);
+
+		soldado.tomaPocion();
+		
+		Assert.assertFalse(soldado.atacar(otro));
+		Assert.assertEquals(0, otro.getSalud(), 0);
+		Assert.assertEquals(100, soldado.getEnergia(), 0);
+	}
+	
+	//Completar con arqueros lanceros y caballeros
+	
+
+	@Test
+	public void testAtaquesSoldadoConItems() {
+		Unidad soldado = new Soldado(new Ubicacion(1, 1));
+		Unidad otro = new Soldado(new Ubicacion(1, 2));
+		
+		soldado = new Puñal(soldado);
+		Assert.assertEquals(13, soldado.getDaño(), 0);
+		Assert.assertEquals(-3, soldado.getDefensa(), 0);
+
+		soldado = new Capa(soldado);
+		Assert.assertEquals(200, soldado.getEnergia(), 0);
+		Assert.assertEquals(11.7, soldado.getDaño(), 0.01);
+
+		System.out.println(soldado.getEnergia());
+		Assert.assertTrue(soldado.atacar(otro));
+		Assert.assertEquals(188.3, otro.getSalud(), 0.001);
+		System.out.println(soldado.getEnergia());
+		Assert.assertEquals(190, soldado.getEnergia(), 0);
+
+		otro = new Escudo(otro);
+	}
+}

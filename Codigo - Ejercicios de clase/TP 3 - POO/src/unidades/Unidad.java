@@ -1,18 +1,33 @@
 package unidades;
 
+import mapa.Ubicacion;
 
-
-public abstract class Unidad implements Elemento {
+public interface Unidad {
+	public double getDaño();
+	public double getEnergia();
+	public double getDefensa();
+	public double getSalud();
+	public Ubicacion getUbicacion();
+	public void tomaPocion();
+	public void recarga();
 	
+	public default Boolean atacar(Unidad unidad) {
+		if(this.puedoAtacar(unidad)) {
+			this.ataca(unidad);
+			unidad.meAtacanCon(unidad.calcularDañoQueMeInflinjen(this.getDaño()));			
+			return true;
+		}
+		return false;
+	}
+	public default double calcularDañoQueMeInflinjen(double daño) {
+		daño = daño - getDefensa();
+		if(daño < 0)
+			return 0;
+		
+		return daño;
+	}
 	
-	private static int RANGO_MINIMO;
-	private  static int RANGO_MAXIMO;
-	private int cant_flechas;
-	private double energia;
-	private double defensa;
-	private double salud;
-	private double daño;
-	
-	public abstract boolean puedoAtacar();
-
+	public boolean puedoAtacar(Unidad unidad);
+	public void ataca(Unidad unidad);	
+	public void meAtacanCon(double daño);
 }

@@ -1,0 +1,26 @@
+package unidades;
+
+import mapa.Ubicacion;
+
+public abstract class Unidad implements Elemento {
+	protected double energia;
+	protected double defensa;
+	protected double salud;
+	protected double daño;
+	
+	protected Ubicacion ubicacion;
+	public Ubicacion getUbicacion() {
+		return ubicacion;
+	}	
+	
+	public void atacar(Unidad u) {
+		if(this.puedoAtacar(u))
+			u.meAtacan(this.daño);
+	}
+	
+	public abstract boolean puedoAtacar(Unidad u);
+	
+	public void meAtacan(double daño) {
+		this.salud = daño - daño*this.defensa;
+	}
+}

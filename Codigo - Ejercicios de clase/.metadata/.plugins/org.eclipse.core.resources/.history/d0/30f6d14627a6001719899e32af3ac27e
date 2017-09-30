@@ -1,0 +1,22 @@
+package items;
+
+import unidades.Unidad;
+
+public class Escudo extends UnidadDecorator  {
+
+	public Escudo(Unidad unidad) {
+		super(unidad);
+	}
+
+
+	@Override
+	public double calcularDañoQueMeInflinjen(double daño) {
+		daño = daño - this.unidad.getDefensa();
+		if(daño < 0)
+			return 0;
+		
+		daño = daño - daño*0.4;
+		
+		return daño;
+	}
+}

@@ -1,0 +1,7 @@
+package items;
+
+import unidades.Elemento;
+
+public abstract class UnidadDecorator implements Elemento {	
+	protected Elemento elemento;
+}

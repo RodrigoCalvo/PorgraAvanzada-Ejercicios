@@ -1,0 +1,20 @@
+package items;
+
+import unidades.Elemento;
+import unidades.Unidad;
+
+public abstract class UnidadDecorator implements Unidad {	
+	protected Unidad unidad;
+	
+	public UnidadDecorator(Unidad unidad) {
+		setUnidad(unidad);
+	}
+
+	public Unidad getUnidad() {
+		return this.unidad;
+	}
+
+	public void setUnidad(Unidad unidad) {
+		this.unidad = unidad;
+	}
+}

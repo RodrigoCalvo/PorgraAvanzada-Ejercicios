@@ -1,0 +1,31 @@
+package items;
+
+import unidades.Elemento;
+import unidades.Unidad;
+
+public class Escudo extends UnidadDecorator{
+	
+	 public Escudo (Unidad unidad){
+		  this.elemento = unidad;
+		 }
+		 
+	 @Override
+	 public double getDaño() {
+	  return this.elemento.getDaño();
+	 }
+	 @Override
+	 public double getEnergia() {
+	  return this.elemento.getEnergia();
+	 }
+	 
+	 @Override
+	 public double getDefensa() {
+		 return this.elemento.getDefensa() + 0.4;
+	 }
+		@Override
+		public double getSalud() {
+			// TODO Auto-generated method stub
+			return 0;
+		}
+
+}

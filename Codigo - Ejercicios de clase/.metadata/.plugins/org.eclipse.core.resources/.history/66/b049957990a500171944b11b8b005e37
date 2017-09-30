@@ -1,0 +1,52 @@
+package unidades;
+
+import mapa.Ubicacion;
+
+public class Arquero extends Unidad {
+	private final static int RANGO_MINIMO = 2;
+	private final static int RANGO_MAXIMO = 5;
+	private int cant_flechas;
+	private double defensa;
+	private double salud;
+	private double daño;
+
+	public Arquero(Ubicacion u) {
+		super();
+		cant_flechas = 20;
+		salud = 50;
+		daño = 5;
+		ubicacion = u;
+	}
+	
+	@Override
+	public double getDaño() {
+		return daño;
+	}
+	@Override
+	public double getEnergia() {
+		 return 0;
+	}
+	 
+	@Override
+	public double getDefensa() {
+		 return defensa;
+	}
+	
+	@Override
+	public void ataco(Unidad u) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public boolean puedoAtacar(Unidad u) {
+		if(this.salud == 0)
+			return false;
+		if(this.cant_flechas == 0)
+			return false;
+		
+		return true;
+	}
+	
+	
+	
+}

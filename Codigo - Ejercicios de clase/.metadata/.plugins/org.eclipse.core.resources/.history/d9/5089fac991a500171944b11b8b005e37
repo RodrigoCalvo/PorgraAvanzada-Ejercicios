@@ -1,0 +1,8 @@
+package unidades;
+
+public interface Elemento {	
+	public double getDaño();
+	public double getEnergia();
+	public double getDefensa();
+	public double getSalud();
+}

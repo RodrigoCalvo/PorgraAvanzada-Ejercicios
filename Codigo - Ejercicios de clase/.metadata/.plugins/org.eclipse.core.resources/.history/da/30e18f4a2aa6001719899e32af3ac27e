@@ -1,0 +1,67 @@
+package items;
+
+import mapa.Ubicacion;
+import unidades.Unidad;
+
+public abstract class UnidadDecorator implements Unidad {	
+	protected Unidad unidad;
+	
+	public UnidadDecorator(Unidad unidad) {
+		setUnidad(unidad);
+	}
+
+	public Unidad getUnidad() {
+		return this.unidad;
+	}
+
+	public void setUnidad(Unidad unidad) {
+		this.unidad = unidad;
+	}
+	
+	@Override
+	public double getDaño() {
+		return this.unidad.getDaño();
+	}
+	@Override
+	public double getEnergia() {
+		return this.unidad.getEnergia();
+	}
+	@Override
+	public double getDefensa() {
+		return this.unidad.getDefensa();
+	}
+	@Override
+	public double getSalud() {
+		return this.unidad.getSalud();
+	}
+	@Override
+	public Ubicacion getUbicacion() {
+		return this.unidad.getUbicacion();
+	}
+	@Override
+	public void tomaPocion(double daño) {
+		this.unidad.tomaPocion();
+	}
+	@Override
+	public void ataca(Unidad unidad) {
+		this.unidad.ataca(unidad);
+	}
+	@Override
+	public void meAtacanCon(double daño) {
+		this.unidad.meAtacanCon(daño);
+	}
+	@Override
+	public boolean puedoAtacar(Unidad unidad) {
+		return this.unidad.puedoAtacar(unidad);
+	}
+	@Override
+	public double calcularDañoQueMeInflinjen(double daño) {
+		return this.unidad.calcularDañoQueMeInflinjen(daño);
+	}
+
+	@Override
+	public String toString() {
+		return unidad.toString();
+	}
+	
+}

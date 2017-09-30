@@ -1,0 +1,15 @@
+package items;
+
+import unidades.Unidad;
+
+public class Escudo extends UnidadDecorator  {
+
+	public Escudo(Unidad unidad) {
+		super(unidad);
+	}
+
+	@Override
+	public double getDefensa() {
+		return this.unidad.getDefensa() +  this.unidad.getDefensa()*0.4;
+	}
+}

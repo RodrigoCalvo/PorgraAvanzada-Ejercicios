@@ -1,0 +1,67 @@
+package test;
+import unidades.*;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+import items.*;
+import mapa.Ubicacion;
+
+
+
+public class testeo {
+	@Test
+	public void testSoldado() {
+		Ubicacion ubi = new Ubicacion(0, 0);
+		Unidad soldado = new Soldado(ubi);
+		
+		System.out.println(soldado);
+	}
+	@Test
+	public void testArquero() {
+		Ubicacion ubi = new Ubicacion(0, 0);
+		Unidad arquero = new Arquero(ubi);
+		
+		System.out.println(arquero);
+	}
+	@Test
+	public void testLancero() {
+		Ubicacion ubi = new Ubicacion(0, 0);
+		Unidad lancero = new Lancero(ubi);
+		
+		System.out.println(lancero);
+	}
+	@Test
+	public void testCaballero() {
+		Ubicacion ubi = new Ubicacion(0, 0);
+		Unidad caballero = new Caballero(ubi);
+		
+		System.out.println(caballero);
+	}
+
+	@Test
+	public void testSoldadoConItems() {
+		Ubicacion ubi = new Ubicacion(0, 0);
+		Unidad soldado = new Soldado(ubi);
+		
+		soldado = new Capa(soldado);
+		
+		Assert.assertEquals(200, soldado.getEnergia(), 0);
+		Assert.assertEquals(9, soldado.getDaño(), 0);
+
+		soldado = new Puñal(soldado);
+
+		Assert.assertEquals(12, soldado.getDaño(), 0);
+		Assert.assertEquals(-3, soldado.getDefensa()(), 0);
+	}
+	@Test
+	public void testArqueroConItems() {
+		Ubicacion ubi = new Ubicacion(0, 0);
+		Unidad soldado = new Soldado(ubi);
+		
+		soldado = new Capa(soldado);
+		
+		Assert.assertEquals(200, soldado.getEnergia(), 0);
+		Assert.assertEquals(9, soldado.getDaño(), 0);
+	}
+}

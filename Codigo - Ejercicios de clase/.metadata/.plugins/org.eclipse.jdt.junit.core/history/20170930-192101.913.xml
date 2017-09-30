@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="testeo" project="TP 3 - POO" tests="10" started="10" failures="0" errors="0" ignored="0">
+  <testsuite name="test.testeo" time="0.003">
+    <testcase name="testLanceroConItems" classname="test.testeo" time="0.0"/>
+    <testcase name="testCaballeroConItems" classname="test.testeo" time="0.001"/>
+    <testcase name="testArquero" classname="test.testeo" time="0.0"/>
+    <testcase name="testAtaques" classname="test.testeo" time="0.001"/>
+    <testcase name="testCaballero" classname="test.testeo" time="0.0"/>
+    <testcase name="testSoldadoConItems" classname="test.testeo" time="0.0"/>
+    <testcase name="testLancero" classname="test.testeo" time="0.0"/>
+    <testcase name="testArqueroConItems" classname="test.testeo" time="0.0"/>
+    <testcase name="testAtaquesPorDistancia" classname="test.testeo" time="0.001"/>
+    <testcase name="testSoldado" classname="test.testeo" time="0.0"/>
+  </testsuite>
+</testrun>

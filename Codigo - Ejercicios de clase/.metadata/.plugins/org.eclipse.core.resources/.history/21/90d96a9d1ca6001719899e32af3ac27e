@@ -1,0 +1,25 @@
+package unidades;
+
+import mapa.Ubicacion;
+
+public interface Unidad {
+	public double getDaño();
+	public double getEnergia();
+	public double getDefensa();
+	public double getSalud();
+	public Ubicacion getUbicacion();
+	
+	public default Boolean atacar(Unidad unidad) {
+		if(this.puedoAtacar(unidad)) {
+			this.ataco(unidad);
+			return true;
+		}
+		return false;
+	}
+	
+	public void ataco(Unidad unidad); 
+	public boolean puedoAtacar(Unidad unidad);
+	
+	//Solo accesible desde la unidad.
+	void setSalud(double salud);
+}

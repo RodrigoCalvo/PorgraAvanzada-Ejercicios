@@ -1,0 +1,37 @@
+package items;
+
+import mapa.Ubicacion;
+import unidades.Unidad;
+
+public abstract class UnidadDecorator implements Unidad {	
+	protected Unidad unidad;
+	
+	public UnidadDecorator(Unidad unidad) {
+		setUnidad(unidad);
+	}
+
+	public Unidad getUnidad() {
+		return this.unidad;
+	}
+
+	public void setUnidad(Unidad unidad) {
+		this.unidad = unidad;
+	}
+	
+	@Override
+	public double getDaño() {
+		return unidad.getDaño();
+	}
+	public double getEnergia();
+	public double getDefensa();
+	public double getSalud();
+	public Ubicacion getUbicacion();
+	
+	public default void atacar(Unidad unidad) {
+		if(this.puedoAtacar(unidad))
+			this.ataco(unidad);
+	}
+	
+	public void ataco(Unidad unidad); 
+	public boolean puedoAtacar(Unidad unidad);
+}
