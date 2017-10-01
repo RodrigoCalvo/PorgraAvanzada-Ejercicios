@@ -10,13 +10,18 @@ public class Caballero  implements Unidad {
 	private double salud;
 	private double daño;
 	private Ubicacion ubicacion;
+
 	
 	public Caballero(Ubicacion u) {
 		salud = 200;
 		daño = 50;
 		ubicacion = u;
 		caballoRebelde = 0;
+
+		
 	}
+	
+	
 
 	@Override
 	public double getDaño() {
@@ -25,6 +30,10 @@ public class Caballero  implements Unidad {
 
 	@Override
 	public double getEnergia() {
+		return 0;
+	}
+	@Override
+	public int getCant_flechas() {
 		return 0;
 	}
 
@@ -55,6 +64,11 @@ public class Caballero  implements Unidad {
 		this.caballoRebelde++; 
 	}
 	
+	@Override
+	public int getCaballoRebelde() {
+		return caballoRebelde;
+	}
+
 	@Override
 	public void meAtacanCon(double daño) {		
 		if(daño > 0)

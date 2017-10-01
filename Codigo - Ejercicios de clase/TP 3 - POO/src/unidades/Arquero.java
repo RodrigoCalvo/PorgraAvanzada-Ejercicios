@@ -10,12 +10,20 @@ public class Arquero implements Unidad {
 	private double salud;
 	private double daño;
 	private Ubicacion ubicacion;
+
+
 	
 	public Arquero(Ubicacion u) {
 		cant_flechas = 20;
 		salud = 50;
 		daño = 5;
 		ubicacion = u;
+	
+	}
+
+
+	public int getCant_flechas() {
+		return this.cant_flechas;
 	}
 
 	@Override
@@ -44,6 +52,11 @@ public class Arquero implements Unidad {
 	}
 	@Override
 	public void tomaPocion() {				
+	}
+	
+	@Override
+	public int getCaballoRebelde() {
+		return 0;
 	}
 	@Override
 	public void recarga() {

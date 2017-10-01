@@ -3,11 +3,15 @@ package unidades;
 import mapa.Ubicacion;
 
 public interface Unidad {
+
 	public double getDaño();
 	public double getEnergia();
 	public double getDefensa();
 	public double getSalud();
+	public int getCant_flechas();
+	public int getCaballoRebelde();
 	public Ubicacion getUbicacion();
+
 	public void tomaPocion();
 	public void recarga();
 	

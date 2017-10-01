@@ -3,19 +3,22 @@ package unidades;
 import mapa.Ubicacion;
 
 public class Soldado implements Unidad {
-	private final static int RANGO_MINIMO = 1;
-	private final static int RANGO_MAXIMO = 1;
+	private final static int RANGO_MINIMO = 0;
+	private final static int RANGO_MAXIMO = 0;
 	private int energia;
 	private double defensa;
 	private double salud;
 	private double daño;
 	private Ubicacion ubicacion;
+
+
 	
 	public Soldado(Ubicacion u) {
 		energia = 100;
 		salud = 200;
 		daño = 10;
 		ubicacion = u;
+	
 	}
 
 	@Override
@@ -32,6 +35,11 @@ public class Soldado implements Unidad {
 	public double getDefensa() {
 		return this.defensa;
 	}
+	
+	@Override
+	public int getCant_flechas() {
+		return 0;
+	}
 
 	@Override
 	public double getSalud() {
@@ -41,6 +49,10 @@ public class Soldado implements Unidad {
 	@Override
 	public Ubicacion getUbicacion() {
 		return this.ubicacion;
+	}
+	@Override
+	public int getCaballoRebelde() {
+		return 0;
 	}
 
 	@Override
@@ -72,7 +84,7 @@ public class Soldado implements Unidad {
 		if(this.getSalud() == 0 || unidad.getSalud() == 0)
 			return false;
 		
-		if(this.ubicacion.distanciaHasta(unidad.getUbicacion()) < RANGO_MINIMO || this.ubicacion.distanciaHasta(unidad.getUbicacion()) > RANGO_MAXIMO)
+		if(this.ubicacion.distanciaHasta(unidad.getUbicacion()) > RANGO_MAXIMO)
 			return false;
 		if(this.energia < 10)
 			return false;

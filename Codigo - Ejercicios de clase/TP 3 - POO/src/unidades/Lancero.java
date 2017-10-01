@@ -9,6 +9,7 @@ public class Lancero  implements Unidad {
 	private double salud;
 	private double daño;
 	private Ubicacion ubicacion;
+
 	
 	public Lancero(Ubicacion u) {
 		salud = 150;
@@ -16,11 +17,16 @@ public class Lancero  implements Unidad {
 		ubicacion = u;
 	}
 
+
 	@Override
 	public double getDaño() {
 		return this.daño;
 	}
-
+	
+	@Override
+	public int getCaballoRebelde() {
+		return 0;
+	}
 	@Override
 	public double getEnergia() {
 		return 0;
@@ -39,6 +45,11 @@ public class Lancero  implements Unidad {
 	@Override
 	public Ubicacion getUbicacion() {
 		return this.ubicacion;
+	}
+	
+	@Override
+	public int getCant_flechas() {
+		return 0;
 	}
 	
 	@Override

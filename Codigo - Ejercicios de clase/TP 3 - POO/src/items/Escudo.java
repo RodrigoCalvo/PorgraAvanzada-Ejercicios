@@ -8,6 +8,7 @@ public class Escudo extends UnidadDecorator  {
 		super(unidad);
 	}
 
+	
 
 	@Override
 	public double calcularDañoQueMeInflinjen(double daño) {

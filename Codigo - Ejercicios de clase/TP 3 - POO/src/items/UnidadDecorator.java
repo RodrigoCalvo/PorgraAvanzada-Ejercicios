@@ -6,18 +6,21 @@ import unidades.Unidad;
 public abstract class UnidadDecorator implements Unidad {	
 	protected Unidad unidad;
 	
+	boolean puñal = false;
+
 	public UnidadDecorator(Unidad unidad) {
 		setUnidad(unidad);
 	}
+
 
 	public Unidad getUnidad() {
 		return this.unidad;
 	}
 
 	public void setUnidad(Unidad unidad) {
-		this.unidad = unidad;
+			this.unidad = unidad;
 	}
-	
+		
 	@Override
 	public double getDaño() {
 		return this.unidad.getDaño();
@@ -33,6 +36,17 @@ public abstract class UnidadDecorator implements Unidad {
 	@Override
 	public double getSalud() {
 		return this.unidad.getSalud();
+	}
+	
+	@Override
+	public int getCaballoRebelde() {
+		return this.unidad.getCaballoRebelde();
+	}
+	
+
+	@Override
+	public int getCant_flechas() {
+		return this.unidad.getCant_flechas();
 	}
 	@Override
 	public Ubicacion getUbicacion() {
