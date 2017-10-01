@@ -27,7 +27,7 @@ public class Puñal extends UnidadDecorator{
 	
 	@Override
 	public double getDaño() {
-		if(this.unidad.getDaño() == 10.0 || this.unidad.getDaño() == 9 || this.unidad.getDaño() == 5 || this.unidad.getDaño() == 4.5 || this.unidad.getDaño() == 25 || this.unidad.getDaño() == 22.5 ||this.unidad.getDaño() == 50 ||this.unidad.getDaño() == 45 )
+		if(this.unidad.getDefensa() == 0)
 			return this.unidad.getDaño() + 3;
 		
 		else

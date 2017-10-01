@@ -14,7 +14,12 @@ public class Capa extends UnidadDecorator  {
 	
 	@Override
 	public double getDaño() {
-		return this.unidad.getDaño() * 0.9;
+		if(this.unidad.getDaño() == 4.5 || this.unidad.getDaño() == 9 || this.unidad.getDaño() == 22.5 || this.unidad.getDaño() == 45 ||  
+			this.unidad.getDaño() == 11.7 || this.unidad.getDaño() == 7.2 || this.unidad.getDaño() == 25.2 || this.unidad.getDaño() == 47.7 ||
+					this.unidad.getDaño() == 7.5 || this.unidad.getDaño() == 12 || this.unidad.getDaño() == 25.5 || this.unidad.getDaño() == 48)
+			return this.unidad.getDaño();
+		else
+			return this.unidad.getDaño() * 0.9;
 
 	}
 	

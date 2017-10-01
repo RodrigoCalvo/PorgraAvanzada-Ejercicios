@@ -102,8 +102,8 @@ public class testeo {
 		Assert.assertEquals(48, caballero.getDaño(), 0);
 		Assert.assertEquals(-3, caballero.getDefensa(), 0);
 	}
-*/
-	/*
+
+	
 	@Test
 	public void testAtaquesPorDistancia() {
 		Unidad soldado = new Soldado(new Ubicacion(1, 1));
@@ -418,15 +418,19 @@ public class testeo {
 		
 		
 	
-	}
+	}*/
 	
 
-	*/@Test
+	@Test
 	public void testAtaquesSoldadoConItems() {
 		Unidad soldado = new Soldado(new Ubicacion(1, 1));
 		Unidad otro = new Soldado(new Ubicacion(1, 1));
 		
 
+		soldado = new Capa(soldado);
+		Assert.assertEquals(100, soldado.getEnergia(), 0);
+		Assert.assertEquals(9, soldado.getDaño(), 0);
+		
 		soldado = new Capa(soldado);
 		Assert.assertEquals(100, soldado.getEnergia(), 0);
 		Assert.assertEquals(9, soldado.getDaño(), 0);
@@ -453,12 +457,10 @@ public class testeo {
 
 		otro = new Escudo(otro);
 		Assert.assertTrue(soldado.atacar(otro));
-		System.out.println(otro.getSalud());
 		Assert.assertEquals(168.8, otro.getSalud(), 0.01);
 		
 		otro = new Escudo(otro);
 		Assert.assertTrue(soldado.atacar(otro));
-		System.out.println(otro.getSalud());
 		Assert.assertEquals(161.6, otro.getSalud(), 0.01);
 
 		
