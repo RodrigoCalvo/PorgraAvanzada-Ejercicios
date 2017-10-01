@@ -6,7 +6,6 @@ import unidades.Unidad;
 public abstract class UnidadDecorator implements Unidad {	
 	protected Unidad unidad;
 	
-	boolean puñal = false;
 
 	public UnidadDecorator(Unidad unidad) {
 		setUnidad(unidad);

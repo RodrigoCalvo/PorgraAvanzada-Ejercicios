@@ -14,7 +14,7 @@ public class Capa extends UnidadDecorator  {
 	
 	@Override
 	public double getDaño() {
-		return this.unidad.getDaño()*0.9;
+		return this.unidad.getDaño() * 0.9;
 
 	}
 	
