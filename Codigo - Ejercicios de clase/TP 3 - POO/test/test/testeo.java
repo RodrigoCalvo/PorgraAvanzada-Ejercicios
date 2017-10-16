@@ -7,8 +7,6 @@ import org.junit.Test;
 import items.*;
 import mapa.Ubicacion;
 
-
-
 public class testeo {
 	@Test
 	public void testSoldado() {
@@ -83,7 +81,6 @@ public class testeo {
 
 		lancero = new Puñal(lancero);
 
-		//System.out.println(lancero.getDaño());
 		Assert.assertEquals(25.5, lancero.getDaño(), 0);
 		Assert.assertEquals(-3, lancero.getDefensa(), 0);
 	}
@@ -102,7 +99,6 @@ public class testeo {
 		Assert.assertEquals(48, caballero.getDaño(), 0);
 		Assert.assertEquals(-3, caballero.getDefensa(), 0);
 	}
-
 	
 	@Test
 	public void testAtaquesPorDistancia() {
@@ -260,9 +256,7 @@ public class testeo {
 		Assert.assertFalse(soldado.atacar(otro));
 		Assert.assertEquals(0, otro.getSalud(), 0);
 		Assert.assertEquals(100, soldado.getEnergia(), 0);
-
 	}
-	
 	@Test
 	public void testAtaquesArqueros() {
 		Unidad arquero = new Arquero(new Ubicacion(1, 1));
@@ -352,10 +346,8 @@ public class testeo {
 		
 		arquero.recarga();
 		
-		Assert.assertEquals(6, arquero.getCant_flechas(), 0);
-		
+		Assert.assertEquals(6, arquero.getCant_flechas(), 0);		
 	}
-	
 	@Test
 	public void testAtaquesLanceros() {
 		Unidad lancero = new Lancero(new Ubicacion(1, 1));
@@ -387,7 +379,6 @@ public class testeo {
 		
 		Assert.assertFalse(lancero.atacar(otro));		
 	}
-
 	@Test
 	public void testAtaquesCaballero() {
 		Unidad caballero = new Caballero(new Ubicacion(1, 1));
@@ -414,13 +405,12 @@ public class testeo {
 		Assert.assertEquals(1, caballero.getCaballoRebelde(), 0);
 		
 		Assert.assertFalse(caballero.atacar(otro));			
-	}	
+	}
 
 	@Test
 	public void testAtaquesSoldadoConItems() {
 		Unidad soldado = new Soldado(new Ubicacion(1, 1));
-		Unidad otro = new Soldado(new Ubicacion(1, 1));
-		
+		Unidad otro = new Soldado(new Ubicacion(1, 1));		
 
 		soldado = new Capa(soldado);
 		Assert.assertEquals(200, soldado.getEnergia(), 0);
@@ -431,23 +421,19 @@ public class testeo {
 		Assert.assertEquals(8.1, soldado.getDaño(), 0);
 		
 		soldado = new Puñal(soldado);
+
 		Assert.assertEquals(11.1, soldado.getDaño(), 0.01);
 		Assert.assertEquals(-3, soldado.getDefensa(), 0.01);
 		
 		soldado = new Puñal(soldado);
 		Assert.assertEquals(14.1, soldado.getDaño(), 0);
 		Assert.assertEquals(-6, soldado.getDefensa(), 0);		
-	
 
 		Assert.assertTrue(soldado.atacar(otro));
-		System.out.println(soldado.getEnergia());
-		Assert.assertEquals(390, soldado.getEnergia(), 0);
-		Assert.assertEquals(185.9, otro.getSalud(), 0);
-		
+		Assert.assertEquals(185.9, otro.getSalud(), 0);		
 		
 		Assert.assertTrue(soldado.atacar(otro));
-		Assert.assertEquals(171.8, otro.getSalud(), 0);
-	
+		Assert.assertEquals(171.8, otro.getSalud(), 0);	
 
 		otro = new Escudo(otro);
 		Assert.assertTrue(soldado.atacar(otro));
@@ -455,9 +441,8 @@ public class testeo {
 		
 		otro = new Escudo(otro);
 		Assert.assertTrue(soldado.atacar(otro));
-		Assert.assertEquals(158.264, otro.getSalud(), 0.01);	
+		Assert.assertEquals(158.264, otro.getSalud(), 0.01);
 	}
-	
 	@Test
 	public void testAtaquesArqueroConItems() {
 		Unidad arquero = new Arquero(new Ubicacion(1, 1));
@@ -466,8 +451,7 @@ public class testeo {
 		arquero = new Puñal(arquero);
 		Assert.assertEquals(8, arquero.getDaño(), 0);
 		Assert.assertEquals(-3, arquero.getDefensa(), 0);
-		
-		
+				
 		arquero = new Puñal(arquero);
 		Assert.assertEquals(11, arquero.getDaño(), 0);
 		Assert.assertEquals(-6, arquero.getDefensa(), 0);
@@ -483,7 +467,6 @@ public class testeo {
 		Assert.assertTrue(arquero.atacar(otro));
 		Assert.assertEquals(178.44, otro.getSalud(), 0.001);
 	}
-	
 	@Test
 	public void testAtaquesLanceroConItems() {
 		Unidad lancero = new Lancero(new Ubicacion(1, 1));
@@ -506,9 +489,8 @@ public class testeo {
 		
 		otro = new Escudo(otro);
 		Assert.assertTrue(lancero.atacar(otro));
-		Assert.assertEquals(139.24, otro.getSalud(), 0.01);			
+		Assert.assertEquals(139.24, otro.getSalud(), 0.001);		
 	}
-	
 	@Test
 	public void testAtaquesCaballeroConItems() {
 		Unidad caballero = new Caballero(new Ubicacion(1, 1));
@@ -526,14 +508,11 @@ public class testeo {
 		Assert.assertEquals(144, otro.getSalud(), 0);
 
 		otro = new Escudo(otro);
-		Assert.assertTrue(caballero.atacar(otro));	
+		Assert.assertTrue(caballero.atacar(otro));
 		Assert.assertEquals(110.4, otro.getSalud(), 0.001);
-		
-		
+				
 		otro = new Escudo(otro);
 		Assert.assertTrue(caballero.atacar(otro));
 		Assert.assertEquals(90.24, otro.getSalud(), 0.001);
-		
-
-	}
+	}	
 }

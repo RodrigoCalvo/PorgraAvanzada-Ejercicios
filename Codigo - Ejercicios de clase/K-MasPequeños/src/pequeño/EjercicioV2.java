@@ -25,8 +25,7 @@ public class EjercicioV2 {
 		
 		//Cargo el array a partir del archivo
 		Integer[] arr = new Integer[CantNumeros];		
-		for (int i = 0; i < CantNumeros; i++) 
-		{
+		for (int i = 0; i < CantNumeros; i++) {
 			arr[i] = sc.nextInt(); 
 		}
 		

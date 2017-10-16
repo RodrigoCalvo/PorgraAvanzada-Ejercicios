@@ -9,7 +9,6 @@ public class Lancero  implements Unidad {
 	private double salud;
 	private double daño;
 	private Ubicacion ubicacion;
-
 	
 	public Lancero(Ubicacion u) {
 		salud = 150;
@@ -17,52 +16,42 @@ public class Lancero  implements Unidad {
 		ubicacion = u;
 	}
 
-
+	/**
+	 * Muestra el daño de la unidad
+	 * @return devuelve el daño de la unidad
+	 */
 	@Override
 	public double getDaño() {
 		return this.daño;
 	}
-	
-	@Override
-	public int getCaballoRebelde() {
-		return 0;
-	}
-	@Override
-	public double getEnergia() {
-		return 0;
-	}
-
+	/**
+	 * Muestra la defensa de la unidad.
+	 * @return devuelve la defensa de la unidad.
+	 */
 	@Override
 	public double getDefensa() {
 		return this.defensa;
 	}
-
+	/**
+	 * Muestra la salud de la unidad.
+	 * @return devuelve la salud de la unidad.
+	 */
 	@Override
 	public double getSalud() {
 		return this.salud;
 	}
-
+	/**
+	 * Muestra la Ubicacion de la unidad.
+	 * @return devuelve la Ubicacion de la unidad.
+	 */
 	@Override
 	public Ubicacion getUbicacion() {
 		return this.ubicacion;
-	}
-	
-	@Override
-	public int getCant_flechas() {
-		return 0;
-	}
-	
-	@Override
-	public void tomaPocion() {
-	}
-	@Override
-	public void recarga() {
-	}
-
-	@Override
-	public void ataca(Unidad unidad) {
-	}
-	
+	}	
+	/**
+	 * Toca la salud del personaje en base al daño que me hacen.
+	 * @param daño recibido
+	 */
 	@Override
 	public void meAtacanCon(double daño) {		
 		if(daño > 0)
@@ -73,7 +62,11 @@ public class Lancero  implements Unidad {
 				this.salud -= daño;
 		}
 	}
-
+	/**
+	 * La unidad calcula si puede o no atacar a otra.
+	 * @param unidad a la que vamos a atacar
+	 * @return devuelve si se puede atacar o no.
+	 */
 	@Override
 	public boolean puedoAtacar(Unidad unidad) {
 		if(this.getSalud() == 0 || unidad.getSalud() == 0)
@@ -84,12 +77,8 @@ public class Lancero  implements Unidad {
 		
 		return true;
 	}
-
 	@Override
 	public String toString() {
 		return "Lancero [defensa=" + defensa + ", salud=" + salud + ", daño=" + daño + ", ubicacion=" + ubicacion + "]";
-	}
-
-	
-	
+	}	
 }

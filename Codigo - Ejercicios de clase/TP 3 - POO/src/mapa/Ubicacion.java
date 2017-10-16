@@ -8,6 +8,7 @@ public class Ubicacion {
 		X = x;
 		Y = y;
 	}
+	/*
 	public int getX() {
 		return X;
 	}
@@ -20,6 +21,7 @@ public class Ubicacion {
 	public void setY(int y) {
 		Y = y;
 	}
+	*/
 	public int distanciaHasta(Ubicacion u) {
 		return (int) (Math.sqrt(
 		Math.pow(this.X - u.X, 2)+

@@ -7,68 +7,75 @@ public class Caballero  implements Unidad {
 	private final static int RANGO_MAXIMO = 2;
 	private int caballoRebelde;
 	private double defensa;
-	private double salud;
+	private double salud = 200;
 	private double daño;
 	private Ubicacion ubicacion;
-
 	
 	public Caballero(Ubicacion u) {
 		salud = 200;
 		daño = 50;
 		ubicacion = u;
-		caballoRebelde = 0;
-
-		
+		caballoRebelde = 0;		
 	}
-	
-	
 
+	/**
+	 * Muestra el daño de la unidad
+	 * @return devuelve el daño de la unidad
+	 */
 	@Override
 	public double getDaño() {
 		return this.daño;
 	}
-
-	@Override
-	public double getEnergia() {
-		return 0;
-	}
-	@Override
-	public int getCant_flechas() {
-		return 0;
-	}
-
+	/**
+	 * Muestra la defensa de la unidad.
+	 * @return devuelve la defensa de la unidad.
+	 */
 	@Override
 	public double getDefensa() {
 		return this.defensa;
 	}
-
+	/**
+	 * Muestra la salud de la unidad.
+	 * @return devuelve la salud de la unidad.
+	 */
 	@Override
 	public double getSalud() {
 		return this.salud;
 	}
-
+	/**
+	 * Muestra la Ubicacion de la unidad.
+	 * @return devuelve la Ubicacion de la unidad.
+	 */
 	@Override
 	public Ubicacion getUbicacion() {
 		return this.ubicacion;
 	}
+	/**
+	 * Le da una pocion a la unidad.
+	 */
 	@Override
 	public void tomaPocion() {
 		this.caballoRebelde = 0;		
 	}
+	/**
+	 * La unidad calcula las consecuencias de haber atacado
+	 */
 	@Override
-	public void recarga() {	
-	}
-
-	@Override
-	public void ataca(Unidad unidad) {
+	public void efectuarAtaque(double energia) {
 		this.caballoRebelde++; 
-	}
-	
+	}	
+	/**
+	 * Muestra la cantidad de ataques que hizo el caballo de la unidad.
+	 * @return devuelve la cantidad de ataques que hizo el caballo de la unidad.
+	 */
 	@Override
 	public int getCaballoRebelde() {
 		return caballoRebelde;
 	}
-
+	/**
+	 * Toca la salud del personaje en base al daño que me hacen.
+	 * @param daño recibido
+	 */
 	@Override
 	public void meAtacanCon(double daño) {		
 		if(daño > 0)
@@ -79,7 +86,11 @@ public class Caballero  implements Unidad {
 				this.salud -= daño;
 		}
 	}
-
+	/**
+	 * La unidad calcula si puede o no atacar a otra.
+	 * @param unidad a la que vamos a atacar
+	 * @return devuelve si se puede atacar o no.
+	 */
 	@Override
 	public boolean puedoAtacar(Unidad unidad) {
 		if(this.getSalud() == 0 || unidad.getSalud() == 0)
@@ -92,7 +103,6 @@ public class Caballero  implements Unidad {
 		
 		return true;
 	}
-
 	@Override
 	public String toString() {
 		return "Caballero [caballoRebelde=" + caballoRebelde + ", defensa=" + defensa + ", salud=" + salud + ", daño="
