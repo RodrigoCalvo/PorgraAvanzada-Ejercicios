@@ -10,17 +10,13 @@ public class Arquero implements Unidad {
 	private double salud;
 	private double daño;
 	private Ubicacion ubicacion;
-
-
 	
 	public Arquero(Ubicacion u) {
 		cant_flechas = 20;
 		salud = 50;
 		daño = 5;
-		ubicacion = u;
-	
+		ubicacion = u;	
 	}
-
 
 	public int getCant_flechas() {
 		return this.cant_flechas;
@@ -86,6 +82,7 @@ public class Arquero implements Unidad {
 		
 		if(this.ubicacion.distanciaHasta(unidad.getUbicacion()) < RANGO_MINIMO || this.ubicacion.distanciaHasta(unidad.getUbicacion()) > RANGO_MAXIMO)
 			return false;
+		
 		if(this.cant_flechas < 1)
 			return false;
 		

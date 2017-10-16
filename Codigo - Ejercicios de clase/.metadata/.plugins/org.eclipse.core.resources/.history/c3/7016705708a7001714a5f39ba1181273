@@ -1,0 +1,27 @@
+package items;
+
+import unidades.*;
+
+
+public class Puñal extends UnidadDecorator{
+
+	public Puñal(Unidad unidad) {
+		super(unidad);
+	}
+	
+	@Override
+	public double getDaño() {
+		if(this.unidad.getDefensa() == 0)
+			return this.unidad.getDaño() + 3;		
+		else
+			return this.unidad.getDaño();			
+	}
+	
+	@Override
+	public double getDefensa() {		
+		if(this.unidad.getDefensa() == 0)
+			return this.unidad.getDefensa() - 3;			
+		else
+			return this.unidad.getDefensa();
+	}
+}

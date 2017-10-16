@@ -3,7 +3,6 @@ package unidades;
 import mapa.Ubicacion;
 
 public class Soldado implements Unidad {
-	private final static int RANGO_MINIMO = 0;
 	private final static int RANGO_MAXIMO = 0;
 	private int energia;
 	private double defensa;
@@ -65,7 +64,7 @@ public class Soldado implements Unidad {
 
 	@Override
 	public void ataca(Unidad unidad) {
-		this.energia-=10; 
+		this.energia+=((Unidad)this).calcularGastoDeEnergia(); 
 	}
 	
 	@Override
@@ -86,7 +85,8 @@ public class Soldado implements Unidad {
 		
 		if(this.ubicacion.distanciaHasta(unidad.getUbicacion()) > RANGO_MAXIMO)
 			return false;
-		if(this.energia < 10)
+		
+		if(this.getEnergia() < 10)
 			return false;
 		
 		return true;

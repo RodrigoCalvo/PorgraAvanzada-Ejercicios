@@ -9,22 +9,16 @@ public class Puñal extends UnidadDecorator{
 		super(unidad);
 	}
 	
-
-	
-
-	/*@Override
+	@Override
 	public double getDaño() {
 		return this.unidad.getDaño() + 3;
 	}
 	@Override
 	public double getDefensa() {
 		return this.unidad.getDefensa() - 3;
-	}*/
-	
-	
-	
+	}
 
-	
+	/*
 	@Override
 	public double getDaño() {
 		if(this.unidad.getDefensa() == 0)
@@ -46,4 +40,5 @@ public class Puñal extends UnidadDecorator{
 			return this.unidad.getDefensa();
 
 	}
+	*/
 }

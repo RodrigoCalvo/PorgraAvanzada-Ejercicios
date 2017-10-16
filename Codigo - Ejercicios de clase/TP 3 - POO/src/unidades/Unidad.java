@@ -30,6 +30,9 @@ public interface Unidad {
 		
 		return daño;
 	}
+	public default double calcularGastoDeEnergia() {
+		return -this.getEnergia()*0.1;
+	}
 	
 	public boolean puedoAtacar(Unidad unidad);
 	public void ataca(Unidad unidad);	
