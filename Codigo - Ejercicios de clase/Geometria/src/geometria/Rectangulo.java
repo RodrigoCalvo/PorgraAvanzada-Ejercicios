@@ -1,6 +1,5 @@
 package geometria;
 
-import sun.security.action.GetBooleanSecurityPropertyAction;
 
 public class Rectangulo extends Figura {
 	private Punto p1;

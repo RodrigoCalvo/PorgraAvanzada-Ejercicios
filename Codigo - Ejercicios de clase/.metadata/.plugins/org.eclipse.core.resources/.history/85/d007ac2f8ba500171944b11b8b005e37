@@ -1,6 +1,0 @@
-package mapa;
-
-public class Ubicacion {
-	private int X;
-	private int Y;
-}

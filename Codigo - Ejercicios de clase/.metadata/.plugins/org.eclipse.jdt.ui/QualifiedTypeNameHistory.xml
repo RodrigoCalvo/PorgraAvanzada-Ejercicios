@@ -1,9 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.lang.Integer"/>
-<fullyQualifiedTypeName name="java.util.LinkedList"/>
 <fullyQualifiedTypeName name="java.lang.Math"/>
 <fullyQualifiedTypeName name="mapa.Ubicacion"/>
 <fullyQualifiedTypeName name="items.Escudo"/>
 <fullyQualifiedTypeName name="unidades.Unidad"/>
+<fullyQualifiedTypeName name="algoritmos.Seleccion"/>
+<fullyQualifiedTypeName name="algoritmos.Insercion"/>
+<fullyQualifiedTypeName name="algoritmos.Shell"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="java.util.Comparator"/>
+<fullyQualifiedTypeName name="org.junit.Before"/>
+<fullyQualifiedTypeName name="java.util.Collection"/>
+<fullyQualifiedTypeName name="java.awt.List"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="algoritmos.QuickSort"/>
+<fullyQualifiedTypeName name="java.util.LinkedList"/>
+<fullyQualifiedTypeName name="tests.KPequeñosTest"/>
+<fullyQualifiedTypeName name="ejercicio.KPequeños"/>
+<fullyQualifiedTypeName name="algoritmos.Burbujeo"/>
+<fullyQualifiedTypeName name="algoritmos.Merge"/>
+<fullyQualifiedTypeName name="org.junit.Assert"/>
+<fullyQualifiedTypeName name="junit.framework.Assert"/>
+<fullyQualifiedTypeName name="comparadores.IntegerComparador"/>
+<fullyQualifiedTypeName name="org.junit.Test"/>
+<fullyQualifiedTypeName name="monticulo.Monticulo"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="ejercicio.Lugar"/>
+<fullyQualifiedTypeName name="ejercicio.Medicion"/>
+<fullyQualifiedTypeName name="java.lang.Double"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="ejercicio.CentroMeteorologico"/>
 </qualifiedTypeNameHistroy>

@@ -8,6 +8,11 @@
 	<classpathentry kind="src" path="src-a-correr-que-es-muy-saludable"/>
 	<classpathentry kind="src" path="src-sopa-de-letras"/>
 	<classpathentry kind="src" path="src-no-se-puede-vivir-ahi"/>
+	<classpathentry kind="src" path="src-numero-complejo"/>
+	<classpathentry kind="src" path="src-geometria"/>
+	<classpathentry kind="src" path="src-estado-piratas"/>
+	<classpathentry kind="src" path="src-decorator"/>
+	<classpathentry kind="src" path="src-programacion-dinamica"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

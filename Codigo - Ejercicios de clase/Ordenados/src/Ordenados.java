@@ -25,8 +25,8 @@ public class Ordenados {
 		sc.close();
 
 		
-		Arrays.sort(vec);		
-		
+		Arrays.sort(vec);
+
 		PrintWriter salida = new PrintWriter(new FileWriter(miPath+"salida.out"));  //  preparo el arch de salida
 		
 		for (int i = 0; i < vec.length; i++) {

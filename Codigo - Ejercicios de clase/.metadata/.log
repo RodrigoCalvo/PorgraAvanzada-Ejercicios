@@ -2663,3 +2663,541 @@ Java Model Exception: Java Model Status [C:\Program Files\Java\jre1.8.0_144\lib\
 
 !ENTRY org.eclipse.jdt.debug 4 130 2017-10-16 14:59:05.469
 !MESSAGE Invalid stack frame
+!SESSION 2017-10-16 23:49:48.984 -----------------------------------------------
+eclipse.buildId=4.7.0.I20170612-0950
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.equinox.p2.reconciler.dropins 4 0 2017-10-16 23:49:53.651
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Exception in org.eclipse.equinox.internal.p2.reconciler.dropins.Activator.start() of bundle org.eclipse.equinox.p2.reconciler.dropins.
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:800)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:729)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:933)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:309)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:581)
+	at org.eclipse.osgi.container.Module.start(Module.java:449)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1628)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1608)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1579)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1522)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+Caused by: java.lang.IllegalStateException: Registry Directory not available: c:\Program Files\Eclipse\eclipse\p2\org.eclipse.equinox.p2.engine\profileRegistry.
+	at org.eclipse.oomph.p2.internal.core.LazyProfileRegistry.getProfileMap(LazyProfileRegistry.java:236)
+	at org.eclipse.oomph.p2.internal.core.LazyProfileRegistry.getProfileMap(LazyProfileRegistry.java:227)
+	at org.eclipse.oomph.p2.internal.core.LazyProfileRegistry.containsProfile(LazyProfileRegistry.java:208)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences.containsProfile(ProfilePreferences.java:112)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences.load(ProfilePreferences.java:259)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.create(EclipsePreferences.java:370)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.internalNode(EclipsePreferences.java:623)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.node(EclipsePreferences.java:766)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.internalNode(EclipsePreferences.java:629)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.node(EclipsePreferences.java:766)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.internalNode(EclipsePreferences.java:629)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.node(EclipsePreferences.java:766)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.internalNode(EclipsePreferences.java:629)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.node(EclipsePreferences.java:766)
+	at org.eclipse.core.internal.preferences.RootPreferences.getNode(RootPreferences.java:105)
+	at org.eclipse.core.internal.preferences.RootPreferences.node(RootPreferences.java:84)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.getSharedPreferences(AbstractRepositoryManager.java:518)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.restoreRepositories(AbstractRepositoryManager.java:1016)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.basicGetRepository(AbstractRepositoryManager.java:181)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:649)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.provisional.p2.directorywatcher.RepositoryListener.initializeMetadataRepository(RepositoryListener.java:104)
+	at org.eclipse.equinox.internal.provisional.p2.directorywatcher.RepositoryListener.<init>(RepositoryListener.java:59)
+	at org.eclipse.equinox.internal.p2.reconciler.dropins.DropinsRepositoryListener.<init>(DropinsRepositoryListener.java:82)
+	at org.eclipse.equinox.internal.p2.reconciler.dropins.Activator.watchDropins(Activator.java:540)
+	at org.eclipse.equinox.internal.p2.reconciler.dropins.Activator.start(Activator.java:173)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:779)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:772)
+	... 12 more
+Root exception:
+java.lang.IllegalStateException: Registry Directory not available: c:\Program Files\Eclipse\eclipse\p2\org.eclipse.equinox.p2.engine\profileRegistry.
+	at org.eclipse.oomph.p2.internal.core.LazyProfileRegistry.getProfileMap(LazyProfileRegistry.java:236)
+	at org.eclipse.oomph.p2.internal.core.LazyProfileRegistry.getProfileMap(LazyProfileRegistry.java:227)
+	at org.eclipse.oomph.p2.internal.core.LazyProfileRegistry.containsProfile(LazyProfileRegistry.java:208)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences.containsProfile(ProfilePreferences.java:112)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences.load(ProfilePreferences.java:259)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.create(EclipsePreferences.java:370)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.internalNode(EclipsePreferences.java:623)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.node(EclipsePreferences.java:766)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.internalNode(EclipsePreferences.java:629)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.node(EclipsePreferences.java:766)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.internalNode(EclipsePreferences.java:629)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.node(EclipsePreferences.java:766)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.internalNode(EclipsePreferences.java:629)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.node(EclipsePreferences.java:766)
+	at org.eclipse.core.internal.preferences.RootPreferences.getNode(RootPreferences.java:105)
+	at org.eclipse.core.internal.preferences.RootPreferences.node(RootPreferences.java:84)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.getSharedPreferences(AbstractRepositoryManager.java:518)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.restoreRepositories(AbstractRepositoryManager.java:1016)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.basicGetRepository(AbstractRepositoryManager.java:181)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:649)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.provisional.p2.directorywatcher.RepositoryListener.initializeMetadataRepository(RepositoryListener.java:104)
+	at org.eclipse.equinox.internal.provisional.p2.directorywatcher.RepositoryListener.<init>(RepositoryListener.java:59)
+	at org.eclipse.equinox.internal.p2.reconciler.dropins.DropinsRepositoryListener.<init>(DropinsRepositoryListener.java:82)
+	at org.eclipse.equinox.internal.p2.reconciler.dropins.Activator.watchDropins(Activator.java:540)
+	at org.eclipse.equinox.internal.p2.reconciler.dropins.Activator.start(Activator.java:173)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:779)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:772)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:729)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:933)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:309)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:581)
+	at org.eclipse.osgi.container.Module.start(Module.java:449)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1628)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1608)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1579)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1522)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-10-16 23:50:08.979
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\rodry'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.oomph.setup.ui 4 0 2017-10-16 23:50:13.501
+!MESSAGE Registry Directory not available: c:\Program Files\Eclipse\eclipse\p2\org.eclipse.equinox.p2.engine\profileRegistry.
+!STACK 0
+java.lang.IllegalStateException: Registry Directory not available: c:\Program Files\Eclipse\eclipse\p2\org.eclipse.equinox.p2.engine\profileRegistry.
+	at org.eclipse.oomph.p2.internal.core.LazyProfileRegistry.getProfileMap(LazyProfileRegistry.java:236)
+	at org.eclipse.oomph.p2.internal.core.LazyProfileRegistry.getProfileMap(LazyProfileRegistry.java:227)
+	at org.eclipse.oomph.p2.internal.core.LazyProfileRegistry.containsProfile(LazyProfileRegistry.java:208)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences.containsProfile(ProfilePreferences.java:112)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences.load(ProfilePreferences.java:259)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.create(EclipsePreferences.java:370)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.internalNode(EclipsePreferences.java:623)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.node(EclipsePreferences.java:766)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.internalNode(EclipsePreferences.java:629)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.node(EclipsePreferences.java:766)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.internalNode(EclipsePreferences.java:629)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.node(EclipsePreferences.java:766)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.internalNode(EclipsePreferences.java:629)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.node(EclipsePreferences.java:766)
+	at org.eclipse.core.internal.preferences.RootPreferences.getNode(RootPreferences.java:105)
+	at org.eclipse.core.internal.preferences.RootPreferences.node(RootPreferences.java:84)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.getSharedPreferences(AbstractRepositoryManager.java:518)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.restoreRepositories(AbstractRepositoryManager.java:1016)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.getKnownRepositories(AbstractRepositoryManager.java:480)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Artifact.getKnownRepositories(CachingRepositoryManager.java:604)
+	at org.eclipse.oomph.p2.core.P2Util.getKnownRepositories(P2Util.java:82)
+	at org.eclipse.oomph.setup.p2.impl.P2TaskImpl.isNeeded(P2TaskImpl.java:600)
+	at org.eclipse.oomph.setup.internal.core.SetupTaskPerformer.initNeededSetupTasks(SetupTaskPerformer.java:1809)
+	at org.eclipse.oomph.setup.ui.SetupUIPlugin.performStartup(SetupUIPlugin.java:680)
+	at org.eclipse.oomph.setup.ui.SetupUIPlugin.access$5(SetupUIPlugin.java:416)
+	at org.eclipse.oomph.setup.ui.SetupUIPlugin$1$1.run(SetupUIPlugin.java:253)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.recommenders.models.rcp 1 11 2017-10-17 00:11:38.474
+!MESSAGE The model index service was accessed either before it started or after it finished running.
+!STACK 0
+org.eclipse.recommenders.utils.Logs$LogTraceException
+	at org.eclipse.recommenders.utils.Logs$LogTraceException.newTrace(Logs.java:381)
+	at org.eclipse.recommenders.utils.Logs.log(Logs.java:134)
+	at org.eclipse.recommenders.utils.Logs.log(Logs.java:126)
+	at org.eclipse.recommenders.internal.models.rcp.EclipseModelIndex.suggest(EclipseModelIndex.java:211)
+	at org.eclipse.recommenders.models.SimpleModelProvider.acquireModel(SimpleModelProvider.java:70)
+	at org.eclipse.recommenders.models.PoolingModelProvider.access$0(PoolingModelProvider.java:1)
+	at org.eclipse.recommenders.models.PoolingModelProvider$ModelPoolFactoryMediator.makeObject(PoolingModelProvider.java:96)
+	at org.eclipse.recommenders.models.PoolingModelProvider$ModelPoolFactoryMediator.makeObject(PoolingModelProvider.java:1)
+	at org.apache.commons.pool.impl.GenericKeyedObjectPool.borrowObject(GenericKeyedObjectPool.java:1220)
+	at org.eclipse.recommenders.models.PoolingModelProvider.acquireModel(PoolingModelProvider.java:67)
+	at org.eclipse.recommenders.internal.calls.rcp.RcpCallModelProvider.acquireModel(RcpCallModelProvider.java:65)
+	at org.eclipse.recommenders.internal.calls.rcp.RcpCallModelProvider.acquireModel(RcpCallModelProvider.java:1)
+	at org.eclipse.recommenders.internal.models.rcp.PrefetchModelArchiveJob.run(PrefetchModelArchiveJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.equinox.p2.engine 4 4 2017-10-17 00:13:31.647
+!MESSAGE An error occurred while collecting items to be installed
+!SUBENTRY 1 org.eclipse.equinox.p2.engine 4 0 2017-10-17 00:13:31.647
+!MESSAGE session context was:(profile=C__Program Files_Eclipse_eclipse, phase=org.eclipse.equinox.internal.p2.engine.phases.Collect, operand=, action=).
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,com.gradleware.tooling.client,0.19.3.v20170801075239
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,com.gradleware.tooling.model,0.19.3.v20170801075239
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,com.gradleware.tooling.utils,0.19.3.v20170801075239
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.apache.lucene.core,6.1.0.v20170814-1820
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.buildship.branding,2.1.2.v20170807-1324
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.buildship.core,2.1.2.v20170807-1324
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.buildship.stsmigration,2.1.2.v20170807-1324
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.buildship.ui,2.1.2.v20170807-1324
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.compare,3.7.101.v20170724-1603
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.core.jobs,3.9.1.v20170714-0547
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.debug.ui,3.12.50.v20170920-1329
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.e4.ui.bindings,0.12.1.v20170823-1632
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.e4.ui.css.core,0.12.101.v20170712-1547
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.e4.ui.css.swt,0.13.1.v20170808-1940
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.e4.ui.model.workbench,2.0.1.v20170713-1800
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.e4.ui.workbench,1.5.1.v20170815-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.e4.ui.workbench.renderers.swt,0.14.101.v20170713-1343
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.e4.ui.workbench.swt,0.14.101.v20170710-1119
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.epp.logging.aeri.core,2.0.6.v20170906-1226
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.epp.logging.aeri.ide,2.0.6.v20170906-1226
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.epp.mpc.core,1.6.2.v20170926-1241
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.epp.mpc.core.win32,1.6.2.v20170926-1241
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.epp.mpc.help.ui,1.6.2.v20170926-1241
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.epp.mpc.ui,1.6.2.v20171004-2006
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.epp.package.common,4.7.1.20171005-1200
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.epp.package.java,4.7.1.20171005-1200
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.equinox.launcher.win32.win32.x86_64,1.1.550.v20170928-1359
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.equinox.p2.artifact.repository,1.1.650.v20170928-1405
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.equinox.p2.core,2.4.101.v20170906-1259
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.equinox.p2.discovery.compatibility,1.0.201.v20170906-1259
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.equinox.p2.metadata.repository,1.2.401.v20170906-1259
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.equinox.p2.publisher.eclipse,1.2.201.v20170906-1259
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.equinox.p2.repository,2.3.301.v20170906-1259
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.equinox.p2.touchpoint.eclipse,2.1.501.v20170906-1259
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.equinox.p2.ui,2.5.1.v20170906-1259
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.equinox.p2.ui.importexport,1.1.301.v20170816-1007
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.equinox.p2.updatesite,1.0.601.v20170906-1259
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.help,3.8.1.v20170815-1448
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.help.base,4.2.101.v20171009-0410
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.help.webapp,3.9.1.v20170816-0843
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jdt,3.13.1.v20171009-0410
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jdt.apt.core,3.5.50.v20170920-0950
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jdt.compiler.apt,1.3.50.v20170920-0950
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jdt.compiler.tool,1.2.50.v20170920-0950
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jdt.core,3.13.50.v20171007-0855
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jdt.core.manipulation,1.9.50.v20170920-1015
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jdt.debug,3.11.50.v20170920-1717
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jdt.debug.ui,3.8.50.v20170928-1211
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jdt.doc.user,3.13.50.v20171004-1030
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jdt.junit,3.10.50.v20171004-1157
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jdt.junit.core,3.9.50.v20170927-1941
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jdt.junit.runtime,3.4.650.v20170920-1015
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jdt.junit4.runtime,1.1.650.v20170920-1015
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jdt.launching,3.9.50.v20171009-0349
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jdt.ui,3.13.50.v20170929-1653
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jem.util,2.1.201.v201707201954
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jface,3.13.1.v20170810-0135
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.archetype.common,1.8.2.20171007-0216
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.core,1.8.2.20171007-0217
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.core.ui,1.8.2.20171007-0217
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.discovery,1.8.2.20171007-0217
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.editor,1.8.2.20171007-0217
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.editor.xml,1.8.2.20171007-0217
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.importer,1.8.2.20171007-0217
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.jdt,1.8.2.20171007-0217
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.jdt.ui,1.8.2.20171007-0217
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.launching,1.8.2.20171007-0217
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.lifecyclemapping.defaults,1.8.2.20171007-0217
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.logback.appender,1.8.2.20171007-0217
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.logback.configuration,1.8.2.20171007-0217
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.maven.indexer,1.8.2.20171007-0216
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.maven.runtime,1.8.2.20171007-0216
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.maven.runtime.slf4j.simple,1.8.2.20171007-0216
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.model.edit,1.8.2.20171007-0217
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.profiles.core,1.8.2.20171007-0217
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.profiles.ui,1.8.2.20171007-0217
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.refactoring,1.8.2.20171007-0217
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.scm,1.8.2.20171007-0217
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.bugzilla.core,3.23.1.v20170623-0008
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.bugzilla.ui,3.23.1.v20170623-0008
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.tasks.core,3.23.1.v20170623-0008
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.tasks.index.core,3.23.1.v20170623-0008
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.tasks.index.ui,3.23.1.v20170623-0008
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.tasks.search,3.23.1.v20170623-0008
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.mylyn.tasks.ui,3.23.1.v20170623-0008
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.osgi,3.12.50.v20170928-1321
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.platform,4.7.1.v20171009-0410
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.platform.doc.user,4.7.1.v20170630-0820
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.rcp,4.7.1.v20171009-0410
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.recommenders.apidocs,2.4.10.v20170911-1410
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.recommenders.apidocs.rcp,2.4.10.v20170911-1410
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.recommenders.calls,2.4.10.v20170911-1410
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.recommenders.calls.rcp,2.4.10.v20170911-1410
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.recommenders.chain.rcp,2.4.10.v20170911-1410
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.recommenders.completion.rcp,2.4.10.v20170911-1410
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.recommenders.constructors,2.4.10.v20170911-1410
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.recommenders.constructors.rcp,2.4.10.v20170911-1410
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.recommenders.coordinates,2.4.10.v20170911-1410
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.recommenders.coordinates.rcp,2.4.10.v20170911-1410
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.recommenders.injection,2.4.10.v20170911-1410
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.recommenders.jayes,2.4.10.v20170911-1410
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.recommenders.jayes.io,2.4.10.v20170911-1410
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.recommenders.jdt,2.4.10.v20170911-1410
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.recommenders.models,2.4.10.v20170911-1410
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.recommenders.models.rcp,2.4.10.v20170911-1410
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.recommenders.mylyn.rcp,2.4.10.v20170911-1410
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.recommenders.net,2.4.10.v20170911-1410
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.recommenders.overrides,2.4.10.v20170911-1410
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.recommenders.overrides.rcp,2.4.10.v20170911-1410
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.recommenders.rcp,2.4.10.v20170911-1410
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.recommenders.snipmatch,2.4.10.v20170911-1410
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.recommenders.snipmatch.rcp,2.4.10.v20170911-1410
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.recommenders.subwords.rcp,2.4.10.v20170911-1410
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.recommenders.types.rcp,2.4.10.v20170911-1410
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.recommenders.utils,2.4.10.v20170911-1410
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.recommenders.utils.rcp,2.4.10.v20170911-1410
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.swt,3.106.1.v20170926-0519
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.swt.win32.win32.x86_64,3.106.1.v20170926-0519
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.team.genericeditor.diff.extension,1.0.1.v20170809-1356
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.ui.console,3.7.1.v20170728-0806
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.ui.forms,3.7.101.v20170815-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.ui.genericeditor,1.0.1.v20170822-2211
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.ui.ide,3.13.1.v20170822-1526
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.ui.navigator.resources,3.6.1.v20170823-1443
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.ui.themes,1.2.1.v20170809-1435
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.ui.views.properties.tabbed,3.8.1.v20170713-0803
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.ui.workbench,3.110.1.v20170704-1208
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wst.common.frameworks,1.2.201.v201707201954
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wst.common.modulecore.ui,1.0.301.v201707201954
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wst.dtd.ui.infopop,1.0.400.v201707252002
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wst.sse.core,1.1.1001.v201707042225
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wst.sse.ui,1.3.600.v201707042340
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wst.sse.ui.infopop,1.0.300.v201707252002
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wst.validation,1.2.701.v201707142105
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wst.validation.ui,1.2.501.v201707142105
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wst.xml.ui.infopop,1.0.400.v201707252002
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wst.xmleditor.doc.user,1.0.700.v201707252002
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wst.xsdeditor.doc.user,1.0.800.v201707252002
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.gradle.toolingapi,3.5.0.v20170801075239
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: binary,epp.package.java.executable.win32.win32.x86_64,4.7.1.20171009-0410
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.apiguardian,1.0.0.v20170910-2246
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.buildship,2.1.2.v20170807-1324
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.e4.rcp,1.6.1.v20170928-1359
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.ecf.filetransfer.feature,3.13.8.v20170715-2257
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.ecf.filetransfer.httpclient4.feature,3.13.8.v20170715-2257
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.epp.logging.aeri.feature,2.0.6.v20170906-1226
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.epp.mpc,1.6.2.v20171004-2006
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.epp.package.common.feature,4.7.1.20171005-1200
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.epp.package.java.feature,4.7.1.20171005-1200
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.equinox.p2.core.feature,1.4.1.v20170928-1405
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.equinox.p2.discovery.feature,1.1.1.v20170906-1259
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.equinox.p2.extras.feature,1.3.1.v20170928-1405
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.equinox.p2.rcp.feature,1.3.1.v20170928-1405
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.equinox.p2.user.ui,2.3.1.v20170928-1405
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.help,2.2.101.v20171009-0410
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.jdt,3.13.1.v20171009-0410
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jdt.junit5.runtime,1.0.0.v20171006-0854
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.m2e.feature,1.8.2.20171007-0217
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.m2e.logback.feature,1.8.2.20171007-0217
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.mylyn.bugzilla_feature,3.23.1.v20170623-0008
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.mylyn_feature,3.23.1.v20170623-0008
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.platform,4.7.1.v20171009-0410
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: binary,org.eclipse.platform.ide.executable.win32.win32.x86_64,4.7.1.M20171009-0410
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: binary,org.eclipse.platform_root,4.7.1.v20171009-0410
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.rcp,4.7.1.v20171009-0410
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: binary,org.eclipse.rcp_root,4.7.1.v20171009-0410
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.recommenders.mylyn.rcp.feature,2.4.10.v20170911-1410
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.recommenders.rcp.feature,2.4.10.v20170911-1410
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.recommenders.snipmatch.rcp.feature,2.4.10.v20170911-1410
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.userstorage,1.1.0.v20170526-1605
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.wst.common_core.feature,3.9.1.v201707201954
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.wst.common_ui.feature,3.9.1.v201707201954
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.wst.xml_core.feature,3.9.1.v201707042225
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.wst.xml_ui.feature,3.9.1.v201707252002
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.wst.xml_userdoc.feature,3.9.1.v201707252002
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.junit.jupiter.api,5.0.0.v20170910-2246
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.junit.jupiter.engine,5.0.0.v20170910-2246
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.junit.jupiter.migrationsupport,5.0.0.v20170910-2246
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.junit.jupiter.params,5.0.0.v20170910-2246
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.junit.platform.commons,1.0.0.v20170910-2246
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.junit.platform.engine,1.0.0.v20170910-2246
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.junit.platform.launcher,1.0.0.v20170910-2246
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.junit.platform.runner,1.0.0.v20170910-2246
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.junit.platform.suite.api,1.0.0.v20170910-2246
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.junit.vintage.engine,4.12.0.v20170910-2246
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2017-10-17 00:13:31.647
+!MESSAGE No repository found containing: osgi.bundle,org.opentest4j,1.0.0.v20170910-2246

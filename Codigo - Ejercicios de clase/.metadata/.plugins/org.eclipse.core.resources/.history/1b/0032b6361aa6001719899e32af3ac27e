@@ -1,9 +1,0 @@
-package items;
-
-import mapa.Ubicacion;
-import unidades.Elemento;
-
-public class Puñal extends UnidadDecorator{
-	
-
-}
