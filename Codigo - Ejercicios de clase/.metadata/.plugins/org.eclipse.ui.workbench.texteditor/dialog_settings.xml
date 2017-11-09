@@ -2,17 +2,31 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="super.aOrdenar" key="selection"/>
+		<item value="CANTIDAD_DE_VECES_A_CORRER" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="10000"/>
+			<item value="Constante.SECUENCIAL_ALEATORIO"/>
+			<item value="Constante.WELSH_POWELL"/>
+			<item value="Constante.MATULA"/>
+			<item value="PATH_ARCHIVOS_EJECUCION"/>
+			<item value="PATH_ARCHIVOS_ENT"/>
+			<item value="Grafo"/>
 			<item value="a"/>
 			<item value="Comparable"/>
 			<item value="system"/>
 		</list>
 		<list key="replacehistory">
+			<item value="CANTIDAD_DE_VECES_A_CORRER"/>
+			<item value="SECUENCIAL_ALEATORIO"/>
+			<item value="POWELL"/>
+			<item value="MATULA"/>
+			<item value="CARPETA_PRUEBAS_SALIDA"/>
+			<item value="CARPETA_PRUEBAS"/>
+			<item value="GrafoNDNP"/>
 			<item value="super.aOrdenar"/>
 			<item value="int"/>
 		</list>

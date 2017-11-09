@@ -22,12 +22,21 @@
 <fullyQualifiedTypeName name="org.junit.Assert"/>
 <fullyQualifiedTypeName name="junit.framework.Assert"/>
 <fullyQualifiedTypeName name="comparadores.IntegerComparador"/>
-<fullyQualifiedTypeName name="org.junit.Test"/>
 <fullyQualifiedTypeName name="monticulo.Monticulo"/>
 <fullyQualifiedTypeName name="ejercicio.Lugar"/>
 <fullyQualifiedTypeName name="ejercicio.Medicion"/>
 <fullyQualifiedTypeName name="java.lang.Double"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="ejercicio.CentroMeteorologico"/>
+<fullyQualifiedTypeName name="org.junit.Test"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="grafo.Nodo"/>
+<fullyQualifiedTypeName name="sorter.QuickSort"/>
+<fullyQualifiedTypeName name="comparadores.NodoPorGradoDeMayorAMenor"/>
+<fullyQualifiedTypeName name="comparadores.NodoPorGradoDeMenorAMayor"/>
+<fullyQualifiedTypeName name="java.io.FileWriter"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="grafo.Generador"/>
+<fullyQualifiedTypeName name="grafo.Grafo"/>
+<fullyQualifiedTypeName name="grafo.GrafoNDNP"/>
 </qualifiedTypeNameHistroy>
